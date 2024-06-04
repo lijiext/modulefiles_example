@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "code_aster is a software which makes mainly mechanics of the solids and structures 
+		 but to supplement the representation of the environment of exploitation of the mechanical 
+		 components, the choice was made include in code_aster features allowing the modeling  of 
+		 phenomena frequently associated with the mechanical phenomenon like thermics or acoustics.
+		 version: 13.8
+		 website: https://www.code-aster.org/
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict 	Code_Aster
+set             APPS_HOME               /public/software/apps/Code_Aster/13.8/hpcx-2.4.1-gcc-7.3.1 
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib

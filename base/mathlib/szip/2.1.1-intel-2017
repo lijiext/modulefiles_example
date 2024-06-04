@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "Szip is a freeware portable general purpose lossless compression program. 
+		 It has a high speed and compression, but high memory demands (up to 20MB) too. 
+		 version: 2.1.1 
+		 website: http://www.compressconsult.com/szip/
+"
+module load		compiler/intel/2017.5.239 
+conflict 	mathlib/szip
+set             SZIP_HOME               /public/software/apps/szip/2.1.1/intel
+prepend-path    LD_LIBRARY_PATH         ${SZIP_HOME}/lib
+prepend-path    INCLUDE                 ${SZIP_HOME}/include

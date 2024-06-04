@@ -1,0 +1,26 @@
+#%Module1.0
+module-whatis "
+	Installed packages:
+AMOEBA ASPHERE BOCS BODY BPM BROWNIAN CG-DNA CG-SPICA CLASS2 COLLOID COLVARS 
+COMPRESS CORESHELL DIELECTRIC DIFFRACTION DIPOLE DPD-BASIC DPD-MESO DPD-REACT 
+DPD-SMOOTH DRUDE EFF ELECTRODE EXTRA-COMPUTE EXTRA-DUMP EXTRA-FIX 
+EXTRA-MOLECULE EXTRA-PAIR FEP GRANULAR INTERLAYER KSPACE LEPTON MACHDYN 
+MANYBODY MC MEAM MESONT MISC ML-IAP ML-POD ML-SNAP MOFFF MOLECULE OPENMP OPT 
+ORIENT PERI PHONON PLUGIN POEMS QEQ REACTION REAXFF REPLICA RIGID SHOCK SPH 
+SPIN SRD TALLY UEF VORONOI YAFF 	
+"
+
+module load compiler/intel/2021.3.0 
+module load mpi/intelmpi/2021.3.0
+module load mathlib/fftw/3.3.10-intelmpi_21-double
+
+conflict	lammps
+
+set             LAMMPS_ROOT             /public/software/apps/lammps/28Mar2023
+
+prepend-path    PATH                    ${LAMMPS_ROOT}/bin
+prepend-path    LIBRARY_PATH            ${LAMMPS_ROOT}/lib64
+prepend-path    LD_LIBRARY_PATH         ${LAMMPS_ROOT}/lib64
+prepend-path    INCLUDE                 ${LAMMPS_ROOT}/include
+prepend-path    MANPATH                 ${LAMMPS_ROOT}/share/man
+prepend-path    PKG_CONFIG_PATH         ${LAMMPS_ROOT}/lib64/pkgconfig

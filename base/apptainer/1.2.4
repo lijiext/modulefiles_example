@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "Apptainer is an open source container platform designed to be simple, 
+         fast, and secure. Many container platforms are available, but Apptainer 
+         is designed for ease-of-use on shared systems and in high performance 
+         computing (HPC) environments.
+         version: 1.2.4
+         website: https://github.com/apptainer/apptainer
+"
+#prereq 
+conflict apptainer
+set             APP_HOME                /public/software/apps/apptainer/1.2.4
+prepend-path    PATH                    ${APP_HOME}/bin

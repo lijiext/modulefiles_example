@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/cp2k/8.2-intelmpi_2020/app/lib:};
+prepend-path PATH {/public/software/apprepo/cp2k/8.2-intelmpi_2020/app/exe/local};
+setenv CP2K_DATA_DIR {/public/software/apprepo/cp2k/8.2-intelmpi_2020/app/data};
+setenv PROGLIST {/public/software/apprepo/cp2k/8.2-intelmpi_2020/app/exe/local/cp2k.popt};

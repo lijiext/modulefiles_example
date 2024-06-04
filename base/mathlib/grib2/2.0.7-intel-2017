@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis	"GRIB2(GRIB Edition 2): the Library contains GRIB2 encoder/decoder and 
+		 Utility to read and write grib2 files. 
+                 version: 2.0.7 
+                 website: https://www.nco.ncep.noaa.gov/pmb/docs/grib2/ 
+"
+conflict mathlib/grib2
+module load	compiler/intel/2017.5.239
+set             GRIB2_DIR               /public/software/mathlib/grib2/2.0.7/ 
+prepend-path    PATH                    ${GRIB2_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${GRIB2_DIR}/lib

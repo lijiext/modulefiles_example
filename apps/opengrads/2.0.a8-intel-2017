@@ -1,0 +1,16 @@
+#%Module1.0
+module-whatis	"The OpenGrADS Project seeks to develop advanced interfaces and extensions based 
+		 on the main GrADS engine. The GrADS (Grid Analysis and Display System ) is an 
+		 interactive desktop tool for easy access, manipulation, and visualization of 
+		 earth science data. 
+		 version: 2.0.a8
+		 website: http://opengrads.org/
+"
+module load		compiler/intel/2017.5.239
+conflict	opengrads
+set             OPENGRADS_DIR          /public/software/mathlib/opengrads/2.0.a8/intel 
+#prepend-path    GADDIR                  $OPENGRADS_DIR/data/
+#prepend-path    GASCRP                  $OPENGRADS_DIR/scripts
+#prepend-path    GASHP                   $OPENGRADS_DIR/shapefiles/
+prepend-path    PATH                    ${OPENGRADS_DIR}/bin
+#prepend-path    LD_LIBRARY_PATH         ${OPENGRADS_DIR}/lib

@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis 	"OpenFOAM is a free, open source CFD software package. OpenFOAM has an extensive 
+		 range of features to solve anything from complex fluid flows involving chemical 
+		 reactions, turbulence and heat transfer, to solid dynamics and electromagnetics.
+		 version: 7
+		 website: https://www.openfoam.com/
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict 	OpenFOAM
+set             APPS_HOME               /public/software/apps/OpenFOAM/7/hpcx-2.4.1-gcc-7.3.1/OpenFOAM-7
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PATH                    ${APPS_HOME}/platforms/linux64GccDPInt32Opt/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/platforms/linux64GccDPInt32Opt/lib

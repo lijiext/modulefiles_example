@@ -1,0 +1,13 @@
+#%Module1
+module-whatis	"CDO is a collection of command line Operators to manipulate and 
+		 analyse Climate and NWP model Data.
+		 version: 1.7.2
+		 website: https://code.mpimet.mpg.de/projects/cdo
+"
+module load		compiler/intel/2017.5.239
+conflict 	cdo
+set             CDO_DIR                 /public/software/mathlib/cdo/1.7.2/intel 
+prepend-path    PATH                    ${CDO_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${CDO_DIR}/lib
+prepend-path    GRIB_DEFINITION_PATH    ${CDO_DIR}/share/grib_api/definitions
+prepend-path    GRIB_SAMPLES_PATH       ${CDO_DIR}/share/grib_api/samples

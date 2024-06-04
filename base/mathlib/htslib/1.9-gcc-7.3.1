@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "A C library for reading/writing high-throughput sequencing data.
+		 version: 1.9
+		 website: http://www.htslib.org/
+"
+module load		compiler/devtoolset/7.3.1
+conflict	mathlib/htslib
+set             APPS_HOME               /public/software/apps/htslib/1.9/gcc-7.3.1
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    LIBRARY_PATH            ${APPS_HOME}/lib
+prepend-path    PKG_CONFIG_PATH		${APPS_HOME}/lib/pkgconfig
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib

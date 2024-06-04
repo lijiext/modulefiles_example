@@ -1,0 +1,28 @@
+#%Module1.0
+#installe par François
+
+proc ModulesHelp { } {
+    puts stderr "DTK-23.04.1 – DCU driver and runtime Toolkit"
+}
+
+module-whatis   "DTK-23.04.1 – DCU driver and runtime Toolkit, version 23.04.1"
+
+conflict compiler/dtk/21.04
+conflict compiler/dtk/22.04.2
+conflict compiler/dtk/22.10
+conflict compiler/dtk/22.10.1
+conflict compiler/dtk/23.04
+
+set             ROCMVER            23.10
+set             DTK_HOME           /public/software/compiler/dtk-$ROCMVER
+set             HYHAL_PATH         /opt/hyhal
+setenv          ROCM_PATH          ${DTK_HOME}
+setenv          HIP_PATH           ${DTK_HOME}/hip
+prepend-path    PATH               ${DTK_HOME}/bin:${DTK_HOME}/llvm/bin:${DTK_HOME}/hip/bin:${DTK_HOME}/hip/bin/hipify:${DTK_HOME}/miopen/bin:${HYHAL_PATH}/bin
+prepend-path    LD_LIBRARY_PATH    ${DTK_HOME}/lib:${DTK_HOME}/lib64:${DTK_HOME}/hip/lib:${DTK_HOME}/llvm/lib:${DTK_HOME}/miopen/lib:${HYHAL_PATH}/lib:${HYHAL_PATH}/lib64
+prepend-path    C_INCLUDE_PATH     ${DTK_HOME}/include:${DTK_HOME}/llvm/include:${DTK_HOME}/hip/include:${DTK_HOME}/miopen/include:${HYHAL_PATH}/include
+prepend-path    CPLUS_INCLUDE_PATH ${DTK_HOME}/include:${DTK_HOME}/llvm/include:${DTK_HOME}/hip/include:${DTK_HOME}/miopen/include:${HYHAL_PATH}/include
+setenv          MIOPEN_SYSTEM_DB_PATH ${DTK_HOME}/share/miopen/db/
+setenv          HSA_FORCE_FINE_GRAIN_PCIE 1
+setenv          AMDGPU_TARGETS "gfx906;gfx926"
+setenv          MIOPEN_FIND_MODE 3

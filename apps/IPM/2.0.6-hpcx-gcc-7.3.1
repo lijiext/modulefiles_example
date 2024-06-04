@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis   "IPM is a portable profiling infrastructure for parallel codes. It provides a 
+		 low-overhead profile of application performance and resource utilization in a 
+		 parallel program. Communication, computation, and IO are the primary focus. 
+		 While the design scope targets production computing in HPC centers, IPM has 
+		 found use in application development, performance debugging and parallel computing 
+		 education. The level of detail is selectable at runtime and presented through a 
+		 variety of text and web reports.
+		 version: 2.0.6 
+		 website: http://ipm-hpc.org/ 	 https://github.com/nerscadmin/IPM
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict	IPM
+set             APPS_HOME               /public/software/apps/ipm/2.0.6/hpcx-2.4.1
+setenv          LD_PRELOAD              ${APPS_HOME}/lib/libipm.so
+setenv          IPM_PLOTICUS_BIN        /public/software/apps/ploticus/2.42/bin/pl
+prepend-path    PATH                    ${APPS_HOME}/bin

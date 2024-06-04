@@ -1,0 +1,22 @@
+#%Module1.0
+module-whatis   "RSEM is a software package for estimating gene and isoform expression levels from 
+		 RNA-Seq data. The RSEM package provides an user-friendly interface, supports threads 
+		 for parallel computation of the EM algorithm, single-end and paired-end read data, 
+		 quality scores, variable-length reads and RSPD estimation.
+                 version: 1.3.3
+                 website: https://github.com/deweylab/RSEM  http://deweylab.github.io/RSEM/
+"
+#prereq
+#module load	hisat2/2.2.0-gcc485
+set             APPS_HOME   /public/software/apprepo/rsem/1.3.3-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PATH                    ${APPS_HOME}/scripts
+###bowtie
+prepend-path    PATH                    ${APPS_HOME}/bowtie
+prepend-path    PATH                    ${APPS_HOME}/bowtie/scripts
+prepend-path    PATH                    ${APPS_HOME}/bowtie/bin
+prepend-path    PYTHONPATH              ${APPS_HOME}/bowtie/lib/python3.9
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/bowtie/lib
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/bowtie/lib/pkgconfig
+prepend-path    PROGLIST    ${APPS_HOME}/bin/rsem-calculate-expression

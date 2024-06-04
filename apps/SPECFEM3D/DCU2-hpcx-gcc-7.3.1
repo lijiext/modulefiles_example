@@ -1,0 +1,14 @@
+##%Module1.0
+module-whatis   "SPECFEM3D Cartesian simulates acoustic (fluid), elastic (solid), coupled acoustic/elastic, 
+		 poroelastic or seismic wave propagation in any type of conforming mesh of hexahedra (structured 
+		 or not.) It can, for instance, model seismic waves propagating in sedimentary basins or any 
+		 other regional geological model following earthquakes. It can also be used for non-destructive 
+		 testing or for ocean acoustics.
+		 version:  master with DCU2
+		 website: https://geodynamics.org/resources/specfem3dcartesian
+"
+module load		mpi/hpcx/gcc-7.3.1
+module load       	compiler/dtk/21.10
+conflict	SPECFEM3D
+set             APPS_HOME              /public/software/apps/SPECFEM3D-DCU2
+prepend-path    PATH                    ${APPS_HOME}/bin

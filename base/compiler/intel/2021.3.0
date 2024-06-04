@@ -1,0 +1,28 @@
+#%Module1.0
+
+#installe par François
+proc ModulesHelp { } {
+    puts stderr "Intel Compiler "
+}
+
+module-whatis   "Intel software tools environment for developing Fortran, C, and/or C++ code using 
+		 Intel® Compilers, include Intel® Math Kernel Library
+		 version: 2021.3.0
+		 website: https://www.intel.com/
+"
+
+conflict compiler/intel
+
+set             CP_INTEL_DIR            /public/software/compiler/intel-compiler/2021.3.0
+prepend-path    PATH                    ${CP_INTEL_DIR}/bin/intel64:${CP_INTEL_DIR}/mkl/bin/intel64
+prepend-path    LD_LIBRARY_PATH         ${CP_INTEL_DIR}/compiler/lib/intel64_lin:${CP_INTEL_DIR}/mkl/lib/intel64:${CP_INTEL_DIR}/tbb/lib/intel64
+prepend-path 	LIBRARY_PATH            ${CP_INTEL_DIR}/compiler/lib/intel64_lin:${CP_INTEL_DIR}/mkl/lib/intel64:${CP_INTEL_DIR}/tbb/lib/intel64
+prepend-path 	MANPATH	                ${CP_INTEL_DIR}/documentation/en/man/common
+prepend-path 	INCLUDE                 ${CP_INTEL_DIR}/compiler/include:${CP_INTEL_DIR}/mkl/include:${CP_INTEL_DIR}/tbb/include
+prepend-path 	FPATH                   ${CP_INTEL_DIR}/compiler/include:${CP_INTEL_DIR}/mkl/include:${CP_INTEL_DIR}/tbb/include
+prepend-path 	CPATH                   ${CP_INTEL_DIR}/compiler/include:${CP_INTEL_DIR}/mkl/include:${CP_INTEL_DIR}/tbb/include
+prepend-path 	MKLROOT                 ${CP_INTEL_DIR}/mkl
+prepend-path 	TBBROOT                 ${CP_INTEL_DIR}/tbb
+prepend-path 	NLSPATH                 ${CP_INTEL_DIR}/compiler/lib/intel64/locale/%l_%t/%N:${CP_INTEL_DIR}/mkl/lib/intel64/locale/%l_%t/%N
+prepend-path    CMPLR_ROOT              ${CP_INTEL_DIR}
+prepend-path    PKG_CONFIG_PATH         ${CP_INTEL_DIR}/mkl/tools/pkgconfig

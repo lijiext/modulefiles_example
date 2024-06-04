@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis 	"g_mmpbsa is developed using two widely used open source software i.e. GROMACS and APBS 
+		 and it has similar user interface like other GROMACS tools. It calculates components of 
+		 binding energy using MM-PBSA method except the entropic term and energetic contribution 
+		 of each residue to the binding using energy decomposition scheme.
+		 version: 1.6
+		 website: https://rashmikumari.github.io/g_mmpbsa  https://github.com/RashmiKumari/g_mmpbsa
+"
+#prereq		compiler/devtoolset/7.3.1
+conflict	g_mmpbsa
+set             APPS_HOME            	/public/software/apps/g_mmpbsa/1.6/gcc-7.3.1
+prepend-path    PATH                 	${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         /public/software/mathlib/fftw/3.3.8/single/gnu/lib
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/gromacs-5.0.2/lib64

@@ -1,0 +1,7 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/ChatGLM6B/1.0-dtk23.04/app/ChatGLM/lib:};
+setenv MIOPEN_USER_DB_PATH {/tmp/miopen-udb_};
+setenv MIOPEN_CUSTOM_CACHE_DIR {/tmp/miopen-cachie_};
+prepend-path PATH {/public/software/apprepo/ChatGLM6B/1.0-dtk23.04/app/ChatGLM/bin};
+setenv MIOPEN_FIND_MODE {3};
+setenv PROGLIST {};

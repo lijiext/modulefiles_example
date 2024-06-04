@@ -1,0 +1,6 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/vtk/6.3.0-intel2020/app/include/vtk-6.3:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/vtk/6.3.0-intel2020/app/mathlib:/public/software/apprepo/vtk/6.3.0-intel2020/app/lib:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/vtk/6.3.0-intel2020/app/include/vtk-6.3:};
+prepend-path PATH {/public/software/apprepo/vtk/6.3.0-intel2020/app/bin};
+setenv PROGLIST {/public/software/apprepo/vtk/6.3.0-intel2020/app/bin/vtkEncodeString-6.3};

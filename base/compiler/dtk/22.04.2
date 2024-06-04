@@ -1,0 +1,26 @@
+#%Module1.0 
+#installe par François
+proc ModulesHelp { } {
+puts stderr "DTK-22.04.2 – DCU driver and runtime Toolkit"
+}
+module-whatis	"DCU driver and runtime Toolkit 
+		 version: 22.04.2
+		 website:
+"
+conflict compiler/dtk
+conflict compiler/rocm
+
+set ROCMVER 22.04.2
+setenv AMDGPU_TARGETS gfx906
+set DTKROOT /public/software/compiler/dtk-22.04.2
+setenv ROCM_PATH ${DTKROOT}
+setenv HIP_PATH ${DTKROOT}/hip
+
+setenv HSA_FORCE_FINE_GRAIN_PCIE 1
+setenv MIOPEN_DEBUG_CONV_IMPLICIT_GEMM 0
+setenv MIOPEN_SYSTEM_DB_PATH ${DTKROOT}/miopen/share/miopen/db
+
+prepend-path C_INCLUDE_PATH ${DTKROOT}/include:${DTKROOT}/llvm/include
+prepend-path LD_LIBRARY_PATH ${DTKROOT}/hip/lib:${DTKROOT}/lib:${DTKROOT}/lib64:${DTKROOT}/llvm/lib:${DTKROOT}/opencl/lib
+prepend-path PATH ${DTKROOT}/bin:${DTKROOT}/hip/bin:${DTKROOT}/llvm/bin
+prepend-path CPLUS_INCLUDE_PATH ${DTKROOT}/include:${DTKROOT}/llvm/include

@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis	"Libxc is a library of exchange-correlation and kinetic energy 
+		 functionals for density-functional theory. The original aim was 
+		 to provide a portable, well tested and reliable set of these 
+		 functionals to be used by all the codes of the European Theoretical 
+		 Spectroscopy Facility (ETSF).
+		 version: 4.3.4
+		 website: https://www.tddft.org/programs/libxc/
+"
+set             LIBXC                   /public/software/mathlib/libxc/4.3.4/intel2017
+#prereq		compile/intel
+conflict 	mathlib/libxc
+prepend-path    PATH                    ${LIBXC}/bin
+prepend-path    LIBRARY_PATH            ${LIBXC}/lib
+prepend-path    LD_LIBRARY_PATH         ${LIBXC}/lib
+prepend-path    PKG_CONFIG_PATH         ${LIBXC}/lib/pkgconfig
+prepend-path    INCLUDE                 ${LIBXC}/include

@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "SNAP (Semi-HMM-based Nucleic Acid Parser) is a general purpose gene finding program 
+		 suitable for both eukaryotic and prokaryotic genomes. 
+		 version: 2013-11-29
+		 website: http://korflab.ucdavis.edu/software.html   https://github.com/KorfLab/SNAP
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/snap/2013-none/app
+prepend-path    PATH                    ${APPS_HOME}
+setenv		ZOE			${APPS_HOME}/Zoe
+prepend-path    PROGLIST    ${APPS_HOME}/snap

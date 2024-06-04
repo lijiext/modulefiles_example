@@ -1,0 +1,19 @@
+#%Module1.0
+
+module load compiler/devtoolset/7.3.1
+module load mpi/hpcx/gcc-7.3.1
+
+set             APP_HOME                /public/software/mathlib/petsc/3.8.3-gnu7.3.1/gnu7.3.1
+
+setenv          PETSC_DIR               /public/software/mathlib/petsc/3.8.3-gnu7.3.1 
+setenv			PETSC_ARCH              gnu7.3.1
+
+prepend-path    PATH      		        ${APP_HOME}/bin
+prepend-path    LIBRARY_PATH            ${APP_HOME}/lib
+prepend-path    LIBRARY_PATH            ${APP_HOME}/lib64
+prepend-path    LD_LIBRARY_PATH         ${APP_HOME}/lib
+prepend-path    LD_LIBRARY_PATH         ${APP_HOME}/lib64
+prepend-path    C_INCLUDE_PATH          ${APP_HOME}/include
+prepend-path    CPLUS_INCLUDE_PATH      ${APP_HOME}/include
+prepend-path    MANPATH                 ${APP_HOME}/share/man
+prepend-path    PKG_CONFIG_PATH         ${APP_HOME}/lib/pkgconfig

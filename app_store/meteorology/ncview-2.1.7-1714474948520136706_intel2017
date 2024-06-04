@@ -1,0 +1,16 @@
+#%Module1.0
+module-whatis	"Ncview is a visual browser for netCDF format files. Typically you would use ncview 
+		 to get a quick and easy, push-button look at your netCDF files. You can view simple 
+		 movies of the data, view along various dimensions, take a look at the actual data 
+		 values, change color maps, invert the data, etc. 
+		 version: 2.1.7
+		 website: http://meteora.ucsd.edu/~pierce/ncview_home_page.html
+"
+module load		compiler/intel/2017.5.239
+set             APPS_HOME   /public/software/apprepo/ncview/2.1.7-intel2017/app
+set             UDUNITS_HOME            /public/software/mathlib/udunits/2.2.25/intel
+prepend-path    LD_LIBRARY_PATH		${UDUNITS_HOME}/lib
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    UDUNITS2_XML_PATH       ${UDUNITS_HOME}/share/udunits/udunits2.xml
+prepend-path    LD_LIBRARY_PATH      ${APPS_HOME}/mathlib
+prepend-path    PROGLIST    ${APPS_HOME}/bin/ncview

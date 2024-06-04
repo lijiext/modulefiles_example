@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "A DFT software for scientific research."
+
+module load compiler/gcc/9.3.0 compiler/intel/2021.3.0  mpi/intelmpi/2021.3.0  anaconda3/5.2.0
+
+conflict         apps/cp2k
+
+set             APPS_HOME                /public/software/apps/cp2k/cp2k-2023.2-imp2018-plumed/cp2k-2023.2
+
+setenv          CP2K_DATA_DIR            ${APPS_HOME}/data
+
+prepend-path    PATH                     ${APPS_HOME}/exe/local
+
+prepend-path	LD_LIBRARY_PATH		 /public/software/apps/cp2k/cp2k-2023.1-imp2018-plumed/cp2k-2023.1/plumed-2.8.1/lib

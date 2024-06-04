@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "Manta calls structural variants (SVs) and indels from mapped paired-end sequencing 
+                 reads. It is optimized for analysis of germline variation in small sets of individuals 
+                 and somatic variation in tumor/normal sample pairs. Manta discovers, assembles and scores 
+                 large-scale SVs, medium-sized indels and large insertions within a single efficient workflow. 
+                 version: 1.6.0
+                 website: https://github.com/Illumina/manta
+"
+#prereq compiler/devtoolset/7.3.1
+module 		load compiler/devtoolset/7.3.1
+set             APPS_HOME   /public/software/apprepo/manta/1.6.0-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PROGLIST    ${APPS_HOME}/bin

@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis	"PnetCDF (Parallel netCDF) is a parallel I/O library for accessing NetCDF files 
+		 in CDF-1, 2, and 5 formats, provides a new set of nonblocking APIs, provide 
+		 high-performance parallel I/O to the applications by enabling all client processes 
+		 to access a shared file in parallel. 
+		 version: 1.12.0
+		 website: http://cucis.ece.northwestern.edu/projects/PnetCDF
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	mathlib/pnetcdf
+set             PNETCDF_DIR             /public/software/mathlib/pnetcdf/1.12.1/intel 
+prepend-path    PNETCDF                 ${PNETCDF_DIR}
+prepend-path    PATH                    ${PNETCDF_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${PNETCDF_DIR}/lib
+prepend-path    PKG_CONFIG_PATH         ${PNETCDF_DIR}/lib/pkgconfig
+prepend-path    INCLUDE                 ${PNETCDF_DIR}/include
+prepend-path    MANPATH                 ${PNETCDF_DIR}/share/man

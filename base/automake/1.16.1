@@ -1,0 +1,10 @@
+#%Module1.0
+module-whatis   "GNU Automake is a tool for automatically generating Makefile.in files 
+		 compliant with the GNU Coding Standards.
+		 version: 1.16.1 
+		 website: https://www.gnu.org/software/automake/
+"
+conflict        automake
+set             AUTOMAKE_DIR          	/public/software/mathlib/automake
+prepend-path    PATH			${AUTOMAKE_DIR}/bin
+prepend-path    MANPATH               	${AUTOMAKE_DIR}/share/man

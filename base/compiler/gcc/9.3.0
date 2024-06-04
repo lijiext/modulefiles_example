@@ -1,0 +1,17 @@
+#%Module1.0
+#module-whatis   "gcc-9.3.0"
+
+conflict compiler/gcc
+
+set             APP_PATH                /public/software/compiler/gcc-9.3.0
+set             MPC_HOME                /public/software/compiler/gcc-9.3.0/mpc-1.0.3
+
+prepend-path    PATH                    ${APP_PATH}/bin
+
+prepend-path    LD_LIBRARY_PATH         ${APP_PATH}/lib64
+prepend-path    LD_LIBRARY_PATH         ${MPC_HOME}/lib
+
+prepend-path    MANPATH                 ${APP_PATH}/share/man
+
+prepend-path    C_INCLUDE_PATH          ${APP_PATH}/include
+prepend-path    C_INCLUDE_PATH          ${MPC_HOME}/include

@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis	"LAPACK is written in Fortran 90 and provides routines for solving systems 
+		 of simultaneous linear equations, least-squares solutions of linear systems 
+		 of equations, eigenvalue problems, and singular value problems. 
+		 version: 3.8.0
+		 website: https://www.netlib.org/lapack/
+"
+#prereq		compiler/intel
+conflict 	mathlib/lapack
+set             LAPACK_HOME             /public/software/mathlib/lapack/intel/3.8.0
+prepend-path    LD_LIBRARY_PATH         ${LAPACK_HOME}/lib

@@ -1,0 +1,5 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/hlahd/1.7.0-none/app/hlahd/bin};
+prepend-path PATH {/public/software/apprepo/hlahd/1.7.0-none/app/python3/bin};
+prepend-path PATH {/public/software/apprepo/hlahd/1.7.0-none/app/bowtie2};
+setenv PROGLIST {/public/software/apprepo/hlahd/1.7.0-none/app/hlahd/bin/hla_est};

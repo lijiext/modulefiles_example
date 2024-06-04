@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/FasterRcnn/1.0-dtk23.04/app/Faster-RCNN_torch1.13_py39_dtk23.04/lib:};
+setenv MIOPEN_FIND_MODE {3};
+setenv PROGLIST {};

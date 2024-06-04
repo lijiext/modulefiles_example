@@ -1,0 +1,18 @@
+#%Module 1.0
+module-whatis	"DCU driver and runtime Toolkit
+		 version: 21.04
+		 website:
+"
+conflict compiler/dtk
+conflict compiler/rocm
+
+setenv AMDGPU_TARGETS gfx906
+setenv DTKROOT /opt/dtk
+setenv ROCM_PATH /opt/dtk
+setenv HIP_PATH /opt/dtk/hip
+setenv MIOPEN_DEBUG_CONV_IMPLICIT_GEMM 0
+setenv MIOPEN_SYSTEM_DB_PATH /opt/dtk/miopen/share/miopen/db
+prepend-path C_INCLUDE_PATH /opt/dtk/include:/opt/dtk/llvm/include
+prepend-path LD_LIBRARY_PATH /opt/dtk/hip/lib:/opt/dtk/lib:/opt/dtk/lib64:/opt/dtk/llvm/lib
+prepend-path PATH /opt/dtk/bin:/opt/dtk/hip/bin:/opt/dtk/llvm/bin
+prepend-path CPLUS_INCLUDE_PATH /opt/dtk/include:/opt/dtk/llvm/include

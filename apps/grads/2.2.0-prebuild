@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"GrADS (Grid Analysis and Display System) is an interactive desktop tool that 
+		 is used for easy access, manipulation, and visualization of earth science data. 
+		 version: 2.2.0
+		 website: http://cola.gmu.edu/grads
+"
+#prereq		
+conflict 	grads
+set             GRADS_DIR               /public/software/mathlib/grads/2.2.0/gnu
+prepend-path    GADDIR                  $GRADS_DIR/data/
+prepend-path    GASCRP                  $GRADS_DIR/scripts
+prepend-path    GASHP                   $GRADS_DIR/shapefiles/
+prepend-path    GAUDPT                  $GRADS_DIR/data/udpt
+prepend-path    PATH                    ${GRADS_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${GRADS_DIR}/lib

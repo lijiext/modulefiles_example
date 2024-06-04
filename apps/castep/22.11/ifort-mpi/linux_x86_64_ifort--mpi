@@ -1,0 +1,8 @@
+#%Module1.0
+module-whatis	" version: 22.11
+		 
+"
+module load compiler/intel/2018.5.274 mpi/intelmpi/2018.4.274
+conflict 	castep
+set             APPS_HOME               /public/software/apps/castep/22.11/ifort-mpi/linux_x86_64_ifort--mpi
+prepend-path    PATH                    ${APPS_HOME}

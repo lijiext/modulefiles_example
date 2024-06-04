@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "        
+        This is 7-Zip tool for linux 
+        How to install: make all3 ! 
+        Usage :  7z x MyCD.iso 
+        More help : 7z --help 
+        creator: leicc 
+"
+
+set             APP_HOME                /public/software/apps/p7zip/9.20.1
+prepend-path    PATH                    ${APP_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APP_HOME}/lib

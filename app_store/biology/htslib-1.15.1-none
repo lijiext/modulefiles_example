@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"HTSlib is an implementation of a unified C library for accessing common file 
+		 formats, such as SAM, CRAM and VCF, used for high-throughput sequencing data, 
+		 and is the core library used by samtools and bcftools. HTSlib only depends on 
+		 zlib. It is known to be compatible with gcc, g++ and clang.
+		 version: 1.15.1
+		 website: http://www.htslib.org/  https://github.com/samtools/htslib
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/htslib/1.15.1-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    MANPATH                 ${APPS_HOME}/share/man
+prepend-path    PROGLIST    ${APPS_HOME}/bin/htsfile

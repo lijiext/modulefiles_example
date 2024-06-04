@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "Yak is initially developed for two specific use cases: 1) to robustly estimate the base 
+		 accuracy of CCS reads and assembly contigs, and 2) to investigate the systematic error 
+		 rate of CCS reads. It achieves the goals by comparing sequences to the k-mer spectrum of 
+		 short reads or by comparing spectra. No reference genome or truth data is needed.
+                 version: 0.1r56
+                 website: https://github.com/lh3/yak
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/yak/0.1r56-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PROGLIST    ${APPS_HOME}/bin/yak

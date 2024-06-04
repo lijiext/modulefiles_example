@@ -1,0 +1,56 @@
+#%Module1.0
+module-whatis   "The Intel(R) MPI Library for Linux* OS is a multi-fabric message passing 
+		 library based on ANL MPICH2 and OSU MVAPICH2. The Intel MPI Library for 
+		 Linux OS implements the Message Passing Interface, version 2 (MPI-2) specification.
+		 version: 2021.3.0
+		 website: http://software.intel.com/en-us/intel-mpi-library/
+"
+conflict 	mpi
+set             ucx_dir               /opt/hpc/software/mpi/hpcx/v2.11.0/ucx_without_rocm
+#module load 	compiler/intel/2021.3.0
+prepend-path    PATH    $ucx_dir/bin
+prepend-path    LD_LIBRARY_PATH $ucx_dir/lib
+prepend-path    LIBRARY_PATH $ucx_dir/lib
+prepend-path    CPATH   $ucx_dir/include
+prepend-path    INCLUDE   $ucx_dir/include
+
+set             MPI_HOME                /public/software/mpi/intelmpi/2021.3.0
+setenv          I_MPI_ROOT              /public/software/mpi/intelmpi/2021.3.0
+prepend-path    CLASSPATH               ${MPI_HOME}/lib/mpi.jar
+prepend-path    PATH                    ${MPI_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${MPI_HOME}/lib/release:${MPI_HOME}/lib
+prepend-path    MANPATH                 ${MPI_HOME}/man
+prepend-path    INCLUDE                 ${MPI_HOME}/include
+prepend-path    CPATH                   ${MPI_HOME}/include
+
+#setenv I_MPI_DEBUG 5
+#setenv I_MPI_FABRICS "shm:ofi"
+#setenv FI_PROVIDER mlx
+#setenv UCX_TLS "self,shm,rc_x"
+
+setenv UCX_DC_MLX5_NUM_DCI  16
+setenv UCX_MAX_EAGER_LANES  4
+setenv UCX_MAX_RNDV_LANES   4
+setenv UCX_IB_PCI_BW        mlx5_0:50Gbs,mlx5_1:50Gbs,mlx5_2:50Gbs,mlx5_3:50Gbs
+setenv UCX_NET_DEVICES      mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1
+
+if { [info exists ::env(I_MPI_OFI_LIBRARY_INTERNAL) ] } {
+    set i_mpi_ofi_library_internal $::env(I_MPI_OFI_LIBRARY_INTERNAL)
+} else {
+    set i_mpi_ofi_library_internal "yes"
+}
+
+switch "" {
+    "0" -
+    "no" -
+    "off" -
+    "disable" {
+    }
+    default {
+        setenv              FI_PROVIDER_PATH       ${MPI_HOME}/libfabric/lib/prov
+
+        prepend-path        PATH                   ${MPI_HOME}/libfabric/bin
+        prepend-path        LD_LIBRARY_PATH        ${MPI_HOME}/libfabric/lib
+        prepend-path        LIBRARY_PATH           ${MPI_HOME}/libfabric/lib
+    }
+}

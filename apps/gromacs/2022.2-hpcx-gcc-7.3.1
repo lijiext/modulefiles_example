@@ -1,0 +1,9 @@
+#%Module1.0
+#build by liuyd
+module load compiler/devtoolset/7.3.1
+module load mpi/hpcx/gcc-7.3.1
+set             APPS_HOME               /public/software/apps/gromacs/2022.2/hpcx-gcc7.3.1
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib64
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    MANPATH                 ${APPS_HOME}/share/man

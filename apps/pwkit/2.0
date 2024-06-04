@@ -1,0 +1,8 @@
+#%Module1.0
+module-whatis   "pwkit"
+
+conflict         apps/pwkit
+
+setenv           PWKIT_ROOT               /public/software/apps/pwkit/2.0
+
+prepend-path     PATH                     /public/software/apps/pwkit/2.0/bin

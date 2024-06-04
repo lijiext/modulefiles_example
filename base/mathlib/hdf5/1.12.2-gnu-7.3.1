@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis   "HDF5 is a data model, library, and file format for storing and managing data. 
+                 It supports an unlimited variety of datatypes, and is designed for flexible 
+                 and efficient I/O and for high volume and complex data.
+                 version: 1.12.0
+                 website: https://www.hdfgroup.org/solutions/hdf5
+"
+set             HDF5_DIR                /public/software/mathlib/hdf5/1.12.2/gnu
+setenv          HDF5                    /public/software/mathlib/hdf5/1.12.2/gnu
+conflict        mathlib/hdf5
+module load compiler/devtoolset/7.3.1
+module load mathlib/zlib/1.2.8-gcc-7.3.1
+#module load            compiler/intel/2017.5.239
+prepend-path    PATH                    ${HDF5_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${HDF5_DIR}/lib
+prepend-path    C_INCLUDE_PATH          ${HDF5_DIR}/include
+prepend-path    CPLUS_INCLUDE_PATH      ${HDF5_DIR}/include

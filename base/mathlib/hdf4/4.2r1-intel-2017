@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis	"HDF4(also HDF) is a collection of utilities and applications for manipulating, 
+		 viewing, and analyzing data in HDF files, and HDF library that provides high-level 
+		 APIs and a low-level data interface.
+		 version: 4.2r1
+		 website: https://www.hdfgroup.org/products/hdf4/
+"
+conflict 	mathlib/hdf4
+module load		compiler/intel/2017.5.239
+set             HDF4_DIR               /public/software/mathlib/hdf4/4.2r1/intel 
+prepend-path    PATH                    ${HDF4_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${HDF4_DIR}/lib
+prepend-path    INCLUDE                 ${HDF4_DIR}/include
+prepend-path    MANPATH                 ${HDF4_DIR}/man

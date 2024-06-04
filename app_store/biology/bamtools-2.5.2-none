@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "BamTools is a project that provides both a C++ API and a command-line toolkit 
+                 for reading, writing, and manipulating BAM (genome alignment) files.
+                 version: 2.5.2
+                 website: https://github.com/pezmaster31/bamtools
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/bamtools/2.5.2-none-1/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib64
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib/pkgconfig
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    PROGLIST    ${APPS_HOME}/bin/bamtools

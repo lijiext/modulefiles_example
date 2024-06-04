@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"OpenCV (Open Source Computer Vision Library) is an open source computer vision 
+		 and machine learning software library. OpenCV was built to provide a common 
+		 infrastructure for computer vision applications and to accelerate the use of 
+		 machine perception in the commercial products.
+		 version: 3.1.0 
+		 website: https://opencv.org/
+"
+set             OPENCV_DIR              /public/software/mathlib/opencv-3.1.0
+module load		compiler/devtoolset/7.3.1
+conflict 	mathlib/opencv
+prepend-path    PATH                    ${OPENCV_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${OPENCV_DIR}/lib
+prepend-path    PKG_CONFIG_PATH         ${OPENCV_DIR}/lib/pkgconfig
+prepend-path    INCLUDE                 ${OPENCV_DIR}/include

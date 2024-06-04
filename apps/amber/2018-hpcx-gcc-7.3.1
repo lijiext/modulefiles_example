@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "Amber (originally Assisted Model Building with Energy Refinement) is software for 
+		 performing molecular dynamics and structure prediction.
+		 version: 2018
+		 website: https://ambermd.org/
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict 	amber
+set             APPS_HOME                /public/software/apps/amber/2018/hpcx-2.4.1-gcc-7.3.1
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib/pkgconfig
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    MANPATH                 ${APPS_HOME}/share/man
+

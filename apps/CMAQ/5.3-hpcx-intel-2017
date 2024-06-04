@@ -1,0 +1,16 @@
+#%Module1.0
+module-whatis   "CMAQ is a powerful open-source computational tool used for air quality management. 
+		 It combines current knowledge in atmospheric science and air quality modeling with 
+		 multi-processor computing techniques to simultaneously model multiple air pollutants 
+		 including ozone, particulate matter, and a variety of air toxics. CMAQ can be used to 
+		 help air quality managers determine the best air quality management scenarios for their 
+		 communities, regions, and states. It can also provide users with detailed information 
+		 about air pollutant concentrations in any given area for any specified emission or 
+		 climate scenario. 
+		 version: 5.3
+		 website: https://www.epa.gov/cmaq   https://github.com/USEPA/CMAQ
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	CMAQ
+set             APPS_HOME            /public/software/apps/CMAQ/5.3/hpcx-2.4.1-intel2017
+prepend-path    PATH                 ${APPS_HOME}

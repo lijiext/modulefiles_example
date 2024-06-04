@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "SIESTA is both a method and its computer program implementation, to perform 
+		 efficient electronic structure calculations and ab initio molecular dynamics 
+		 simulations of molecules and solids.
+		 version: 4.1-b4
+		 website: https://departments.icmab.es/leem/siesta/
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	siesta
+set             APPS_HOME            /public/software/apps/siesta/4.1-b4/hpcx-2.4.1-intel2017
+prepend-path    PATH                 ${APPS_HOME}/bin

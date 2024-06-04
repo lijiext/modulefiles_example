@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis	"zlib is designed to be a free, general-purpose, legally unencumbered - that is, 
+		 not covered by any patents - lossless data-compression library for use on 
+		 virtually any computer hardware and operating system.
+		 version: 1.2.8
+		 website: http://www.zlib.net/
+"
+#prereq		compiler/devtoolset/7.3.1
+conflict 	mathlib/zlib
+set             ZLIB_DIR                /public/software/mathlib/zlib/1.2.8/gcc
+prepend-path    LD_LIBRARY_PATH         ${ZLIB_DIR}/lib
+prepend-path    PKG_CONFIG_PATH 	${ZLIB_DIR}/lib/pkgconfig
+prepend-path    INCLUDE                 ${ZLIB_DIR}/include
+prepend-path    MANPATH                 ${ZLIB_DIR}/share/man

@@ -1,0 +1,18 @@
+#%Module1.0
+module-whatis	"The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers. 
+		 The library provides a wide range of mathematical routines such as random number 
+		 generators, special functions and least-squares fitting.
+                 version: 2.6
+                 website: https://www.gnu.org/software/gsl/
+"
+set             GSL                     /public/software/mathlib/gsl/2.6/intel
+conflict 	mathlib/gsl
+module load		compiler/intel/2017.5.239
+
+prepend-path    PATH                    ${GSL}/bin
+prepend-path    LIBRARY_PATH            ${GSL}/lib
+prepend-path    LD_LIBRARY_PATH         ${GSL}/lib
+prepend-path    PKG_CONFIG_PATH	 	${GSL}/lib/pkgconfig
+prepend-path    INCLUDE                 ${GSL}/include
+prepend-path    MANPATH                 ${GSL}/share/man
+

@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis	"FFTW (Fastest Fourier Transform in the West) is a C subroutine library for computing 
+                 the discrete Fourier transform (DFT) in one or more dimensions, of arbitrary input size, 
+                 and of both real and complex data.
+                 version: 3.3.8 (single precision)
+                 website: http://www.fftw.org/ 
+"
+set             FFTW                /public/software/mathlib/fftw/3.3.8/single/intel
+
+conflict mathlib/fftw
+module load	compiler/intel/2017.5.239
+
+prepend-path    LIBRARY_PATH            ${FFTW}/lib
+prepend-path    LD_LIBRARY_PATH         ${FFTW}/lib
+prepend-path    INCLUDE                 ${FFTW}/include
+prepend-path    MANPATH                 ${FFTW}/share/man
+prepend-path    PKG_CONFIG_PATH         ${FFTW}/lib/pkgconfig

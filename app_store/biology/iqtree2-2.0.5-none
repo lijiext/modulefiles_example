@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "IQ-TREE was motivated by the rapid accumulation of phylogenomic data, leading to a 
+		 need for efficient phylogenomic software that can handle a large amount of data and 
+		 provide more complex models of sequence evolution. To this end, IQ-TREE can utilize 
+		 multicore computers and distributed parallel computing to speed up the analysis. 
+		 IQ-TREE automatically performs checkpointing to resume an interrupted analysis.
+                 version: 2.2.0.5 prebuild
+                 website: https://github.com/iqtree/iqtree2	http://www.iqtree.org/
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/iqtree2/2.0.5-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PROGLIST    ${APPS_HOME}/bin/iqtree2

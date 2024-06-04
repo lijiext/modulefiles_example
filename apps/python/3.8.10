@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "Python3 dev toolkit.."
+#module load compiler/intel/2017.5.239
+
+conflict apps/python
+
+set             Python_HOME             /public/software/apps/python/3.8.10
+
+setenv          Python_ROOT             /public/software/apps/python/3.8.10
+prepend-path    PATH                    ${Python_HOME}/bin
+prepend-path    PYTHONPATH              ${Python_HOME}/lib/python3.8

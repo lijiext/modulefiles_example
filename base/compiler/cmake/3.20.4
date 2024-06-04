@@ -1,0 +1,10 @@
+#%Module1.0
+module-whatis   "CMake is an open-source, cross-platform family of 
+                 tools designed to build, test and package software.
+                 version: 3.20.4 prebuild
+                 website: https://cmake.org/
+"
+conflict 	compiler/cmake
+set             APPS_HOME               /public/software/Biosoft/cmake-3.20.4-linux-x86_64
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    MANPATH         	${APPS_HOME}/man

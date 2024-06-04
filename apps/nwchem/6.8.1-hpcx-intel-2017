@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "NWChem aims to provide its users with computational chemistry tools that are scalable both 
+		 in their ability to treat large scientific computational chemistry problems efficiently, 
+		 and in their use of available parallel computing resources from high-performance parallel 
+		 supercomputers to conventional workstation clusters.
+		 version: 6.8.1
+		 website: https://www.nwchem-sw.org/
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	nwchem
+set             APPS_HOME               /public/software/apps/nwchem/6.8.1/hpcx-2.4.1-intel2017
+prepend-path    PATH                    ${APPS_HOME}/bin/LINUX64

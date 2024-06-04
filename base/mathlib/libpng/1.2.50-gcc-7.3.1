@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis 	"libpng is the official PNG reference library. It supports almost all 
+		 PNG features, is extensible, and has been extensively tested for over 23 years.
+		 version: 1.2.50
+		 website: http://www.libpng.org/pub/png/libpng.html
+"
+#prereq		compiler/devtoolset/7.3.1
+conflict 	mathlib/libpng
+set             LIBPNG_DIR                /public/software/mathlib/libpng/1.2.50/gcc
+prepend-path    PATH                    ${LIBPNG_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${LIBPNG_DIR}/lib
+prepend-path    INCLUDE                 ${LIBPNG_DIR}/include
+prepend-path    MANPATH                 ${LIBPNG_DIR}/share/man
+prepend-path    PKG_CONFIG_PATH        	${LIBPNG_DIR}/lib/pkgconfig

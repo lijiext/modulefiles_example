@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "ROMS (The Regional Ocean Modeling System) is a free-surface, terrain-following, 
+		 primitive equations ocean model widely used by the scientific community for a 
+		 diverse range of applications. ROMS includes accurate and efficient physical and 
+		 numerical algorithms and several coupled models for biogeochemical, bio-optical, 
+		 sediment, and sea ice applications. 
+		 version: 3.6
+		 website: https://www.myroms.org/
+"
+module load		mpi/hpcx/intel-2017.5.239
+module load		mathlib/netcdf/4.4.1-intel-2017
+conflict	ROMS
+set             APPS_HOME            /public/software/apps/ROMS/3.6/hpcx-2.4.1-intel2017
+prepend-path    PATH                 ${APPS_HOME}/install

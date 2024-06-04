@@ -1,0 +1,10 @@
+#%Module1.0
+module-whatis   "CMake is an open-source, cross-platform family of 
+		 tools designed to build, test and package software.
+		 version: 3.15.6
+		 website: https://cmake.org/
+"
+conflict	compiler/cmake
+set             CMAKE_DIR	/public/software/compiler/cmake-3.15.6
+prepend-path    PATH		${CMAKE_DIR}/bin
+prepend-path    MANPATH		${CMAKE_DIR}/man

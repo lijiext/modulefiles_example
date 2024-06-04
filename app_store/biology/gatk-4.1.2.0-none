@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis	"The Genome Analysis Toolkit (GATK) is a set of bioinformatic tools for analyzing 
+		 high-throughput sequencing (HTS) and variant call format (VCF) data. The toolkit 
+		 is well established for germline short variant discovery from whole genome and exome 
+		 sequencing data. GATK4 expands functionality into copy number and somatic analyses 
+		 and offers pipeline scripts for workflows. 
+		 version: 4.1.2.0
+		 website: http://gatk.broadinstitute.org/  https://github.com/broadinstitute/gatk
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/gatk/4.1.2.0-none/app
+prepend-path    PATH		${APPS_HOME}/
+prepend-path    PROGLIST    ${APPS_HOME}/build/bundle-files-collected/gatk

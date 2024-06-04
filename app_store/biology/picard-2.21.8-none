@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "Picard is a set of command line tools for manipulating high-throughput sequencing (HTS) 
+                 data and formats such as SAM/BAM/CRAM and VCF. These file formats are defined in the 
+                 Hts-specs repository. See especially the SAM specification and the VCF specification.
+                 version: 2.21.8
+                 website: https://broadinstitute.github.io/picard/
+                 Usage:  java -jar /public/software/Biosoft/picard-2.21.8/picard.jar ......
+"
+set             APPS_HOME   /public/software/apprepo/picard/2.21.8-none/app
+setenv		PICARD			${APPS_HOME}/picard.jar
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/picard.jar

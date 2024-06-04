@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"Libjpeg is a widely used C library for reading and writing JPEG image files. 
+		 It was developed by Tom Lane and the Independent JPEG Group (IJG) during the 
+		 1990's and it is now maintained by several developers using various services 
+		 identified in the SourceForge summary.
+		 version: 9.1.0
+		 website: http://libjpeg.sourceforge.net/ http://www.ijg.org/files/ 
+"
+set             LIBJPEG_DIR                /public/software/mathlib/libjpeg/9.1.0/intel
+module load		compiler/intel/2017.5.239
+conflict 	mathlib/libjpeg
+prepend-path    PATH                    ${LIBJPEG_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${LIBJPEG_DIR}/lib
+prepend-path    INCLUDE                 ${LIBJPEG_DIR}/include
+prepend-path    MANPATH                 ${LIBJPEG_DIR}/share/man

@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/mnist/1.0-dtk23.04/app/mnist/lib:};
+prepend-path PATH {/public/software/apprepo/mnist/1.0-dtk23.04/app/mnist/bin};
+setenv MIOPEN_FIND_MODE {3};
+setenv PROGLIST {/public/software/apprepo/mnist/1.0-dtk23.04/app/mnist/bin/torchrun};

@@ -1,0 +1,7 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/ovito/2.8.2-none/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/ovito/2.8.2-none/app/lib:};
+setenv LIBRARY_PATH {/public/software/apprepo/ovito/2.8.2-none/app/lib:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/ovito/2.8.2-none/app/include:};
+prepend-path PATH {/public/software/apprepo/ovito/2.8.2-none/app/bin};
+setenv PROGLIST {/public/software/apprepo/ovito/2.8.2-none/app/bin};

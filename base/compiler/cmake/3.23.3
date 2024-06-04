@@ -1,0 +1,9 @@
+#%Module1.0
+
+#installe par François
+
+module-whatis   "CMAKE 3.23.3"
+conflict	compiler/cmake
+set             CMAKE_DIR           /public/software/compiler/cmake-3.23.3
+prepend-path    PATH               ${CMAKE_DIR}/bin
+prepend-path    MANPATH               ${CMAKE_DIR}/man

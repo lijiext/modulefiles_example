@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "Elmer is a finite element software for multiphysical problems published under open 
+		 source. Elmer is mainly but not exclusively developed by CSC – IT Center for Science. 
+		 The purpose of this site is to host services for the benefit of the user community.
+		 version: 8.4
+		 website: http://www.elmerfem.org   https://github.com/ElmerCSC/elmerfem
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict 	Elmer
+set             APPS_HOME               /public/software/apps/Elmer/8.4/hpcx-2.4.1-intel2017 
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib/elmersolver

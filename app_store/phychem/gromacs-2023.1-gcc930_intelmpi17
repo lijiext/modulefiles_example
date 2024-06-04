@@ -1,0 +1,11 @@
+#%Module1.0
+setenv GMXBIN {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/bin};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/lib64};
+setenv MANPATH {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/share/man:};
+setenv PKG_CONFIG_PATH {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/lib64/pkgconfig};
+setenv GMXLDLIB {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/lib64};
+setenv GMXMAN {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/share/man};
+setenv GMXDATA {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/share/gromacs};
+prepend-path PATH {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/bin};
+setenv PROGLIST {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app/bin/gmx_mpi};
+setenv GROMACS_DIR {/public/software/apprepo/gromacs/2023.1-gcc930_intelmpi17/app};

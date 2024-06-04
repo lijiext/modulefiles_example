@@ -1,0 +1,14 @@
+##%Module1.0
+
+module-whatis   "IntelMPI MPI utilities for IB/intel compiler"
+module load compiler/intel/2020.1.217
+conflict mpi
+
+set             MPI_HOME                /public/software/compiler/intel/intel-2020/compilers_and_libraries_2020.1.217/mpi
+
+setenv          I_MPI_ROOT              /public/software/compiler/intel/intel-2020/compilers_and_libraries_2020.1.217/mpi
+prepend-path    PATH                    ${MPI_HOME}/intel64/bin:${MPI_HOME}/intel64/libfabric/bin
+prepend-path    LD_LIBRARY_PATH         ${MPI_HOME}/intel64/lib:${MPI_HOME}/intel64/lib/release:${MPI_HOME}/intel64/lib/release_mt:${MPI_HOME}/intel64/lib/debug:${MPI_HOME}/intel64/lib/debug_mt:${MPI_HOME}/intel64/libfabric/lib
+prepend-path    FI_PROVIDER_PATH        ${MPI_HOME}/intel64/libfabric/lib/prov
+prepend-path    MANPATH                 ${MPI_HOME}/man
+prepend-path    INCLUDE                 ${MPI_HOME}/intel64/include

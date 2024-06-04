@@ -1,0 +1,4 @@
+#%Module1.0
+setenv CPATH {/public/software/mathlib/gsl/2.6/intel/include:};
+prepend-path PATH {/public/software/apprepo/fastq_multx/1.03-gcc731/app/bin};
+setenv PROGLIST {/public/software/apprepo/fastq_multx/1.03-gcc731/app/bin/fastq-multx};

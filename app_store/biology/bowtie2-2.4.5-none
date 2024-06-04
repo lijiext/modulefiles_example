@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "Bowtie2 is an ultrafast and memory-efficient tool for aligning sequencing reads
+		 to long reference sequences. It is particularly good at aligning reads of about 50
+		 up to 100s or 1,000s of characters, and particularly good at aligning to relatively
+		 long (e.g. mammalian) genomes. Bowtie 2 indexes the genome with an FM Index to keep
+		 its memory footprint small: for the human genome, its memory footprint is typically
+		 around 3.2 GB. Bowtie 2 supports gapped, local, and paired-end alignment modes.
+		 version: 2.4.5-prebuild  
+		 website: https://github.com/BenLangmead/bowtie2
+"
+module load anaconda3/5.2.0
+set             APPS_HOME   /public/software/apprepo/bowtie2/2.4.5-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PATH                    ${APPS_HOME}/scripts
+prepend-path    PROGLIST    ${APPS_HOME}/bowtie2

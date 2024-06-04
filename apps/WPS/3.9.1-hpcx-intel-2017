@@ -1,0 +1,19 @@
+#%Module1.0
+module-whatis	"The WRF Pre-Processing System (WPS) is a collection of Fortran and C programs that 
+		 provides data used as input to the real.exe and real_nmm.exe programs. There are 
+		 three main programs and a number of auxiliary programs that are part of WPS.  
+		 Both the ARW and NMM dynamical cores in WRF are supported by WPS.
+		 version: 3.9.1
+		 website: https://www2.mmm.ucar.edu/wrf/users   https://github.com/wrf-model/WPS
+"
+module load		mpi/hpcx/intel-2017.5.239
+module load 		mathlib/hdf5/1.8.20-intel-2017
+module load 		mathlib/grib2/2.0.7-intel-2017
+module load 		mathlib/netcdf/4.4.1-intel-2017 
+module load 		mathlib/libpng/1.2.50-intel-2017
+conflict	WPS
+set 		APPS_HOME 	/public/software/apps/WPS/3.9.1
+prepend-path 	PATH 		${APPS_HOME}/geogrid/src
+prepend-path 	PATH 		${APPS_HOME}/ungrib/src
+prepend-path 	PATH 		${APPS_HOME}/metgrid/src
+prepend-path 	PATH 		${APPS_HOME}/util/src

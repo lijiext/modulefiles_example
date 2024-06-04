@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis   "BigDFT is an electronic structure pseudopotential code that employs Daubechies wavelets 
+		 as a computational basis, designed for usage on massively parallel architectures. It features 
+		 high-precision cubic-scaling DFT functionalities enabling treatment of molecular, slab-like 
+		 as well as extended systems. It features a linear-scaling algorithm that employs adaptive  Support 
+		 Functions (generalized Wannier orbitals) enabling the treatment of system of many thousand atoms.
+		 version: 1.8.3
+		 website: https://bigdft.org/
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	bigDFT
+set             BIGDFT               /public/software/apps/bigDFT/1.8.3/hpcx-2.4.1-intel2017/install
+prepend-path    PATH                 ${BIGDFT}/bin
+prepend-path    INCLUDE              ${BIGDFT}/include
+prepend-path    LD_LIBRARY_PATH      ${BIGDFT}/lib64
+prepend-path    LD_LIBRARY_PATH      ${BIGDFT}/lib
+prepend-path    PKG_CONFIG_PATH	     ${BIGDFT}/lib/pkgconfig

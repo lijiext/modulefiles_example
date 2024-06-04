@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "NAMD is a parallel molecular dynamics code designed for high-performance 
+		 simulation of large biomolecular systems.  NAMD uses the popular molecular i
+		 graphics program VMD for simulation setup and trajectory analysis, but is also 
+		 file-compatible with AMBER, CHARMM, and X-PLOR.
+		 version: 2.15 for DCU2 thread
+		 website: https://www.ks.uiuc.edu/Research/namd/
+"
+module load		compiler/devtoolset/7.3.1
+module load		compiler/dtk/21.04
+
+conflict 	NAMD
+
+set             APPS_HOME            /public/software/apps/NAMD-DCU2/2.15/thread
+prepend-path    PATH                 ${APPS_HOME}/bin

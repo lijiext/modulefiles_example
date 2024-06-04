@@ -1,0 +1,19 @@
+#%Module1.0
+module-whatis   "The major problem of scaffolding polyploid genome is that Hi-C signals are frequently detected 
+		 between allelic haplotypes and any existing stat of art Hi-C scaffolding program links the 
+		 allelic haplotypes together. To solve the problem, we developed a new Hi-C scaffolding pipeline, 
+		 called ALLHIC, specifically tailored to the polyploid genomes. ALLHIC pipeline contains a total 
+		 of 5 steps: prune, partition, rescue, optimize and build.
+		 version: 0.9.13
+		 website: https://github.com/tangerzhang/ALLHiC
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/allhic/0.9.13-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PATH                    ${APPS_HOME}/scripts
+prepend-path    PYTHONPATH              ${APPS_HOME}/lib/python2.7/site-packages
+prepend-path	LD_LIBRARY_PATH		${APPS_HOME}/lib
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib/pkgconfig
+prepend-path    MANPATH                 ${APPS_HOME}/share/man
+prepend-path    PROGLIST    ${APPS_HOME}/allhic.v0.9.8
+

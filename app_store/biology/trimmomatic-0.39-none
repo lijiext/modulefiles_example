@@ -1,0 +1,8 @@
+#%Module1.0
+module-whatis   "
+Usage:  java -jar \$TRIM ......
+"
+set             APPS_HOME   /public/software/apprepo/trimmomatic/0.39-none/app
+setenv		TRIM			${APPS_HOME}/trimmomatic-0.39.jar
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/trimmomatic-0.39.jar

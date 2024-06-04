@@ -1,0 +1,8 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/lib64:};
+setenv PKG_CONFIG_PATH {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/lib64/pkgconfig:};
+setenv LIBRARY_PATH {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/lib64:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/include:};
+prepend-path PATH {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/bin};
+setenv PROGLIST {/public/software/apprepo/lammps/lammps-5Jun2019-1716577535591288833_intelmpi2018_icszy_xa_phy_ky-1716577535591288833/app/bin/lmp_mpi};

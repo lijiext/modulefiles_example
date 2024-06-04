@@ -1,0 +1,3 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/namd/v2.9-intelmpi2017/app/Linux-x86_64-icc};
+setenv PROGLIST {/public/software/apprepo/namd/v2.9-intelmpi2017/app/Linux-x86_64-icc/namd2};

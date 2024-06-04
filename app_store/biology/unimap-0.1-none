@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "Unimap is a fork of minimap2 optimized for assembly-to-reference alignment. 
+		 It integrates the minigraph chaining algorithm and can align through long 
+		 INDELs (up to 100kb by default) much faster than minimap2. Unimap is a better 
+		 fit for resolving segmental duplications and is recommended over minimap2 for 
+		 alignment between high-quality assemblies.
+                 version: 0.1 
+                 website: https://github.com/lh3/unimap
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/unimap/0.1-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PROGLIST    ${APPS_HOME}/bin/unimap

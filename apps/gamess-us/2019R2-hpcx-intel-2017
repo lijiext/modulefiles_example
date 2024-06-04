@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "GAMESS (General Atomic and Molecular Electronic Structure System) is computer software 
+		 for computational chemistry program. It can perform several general computational chemistry 
+		 calculations, including Hartree-Fock method, density functional theory (DFT), generalized 
+		 valence bond (GVB), and multi-configurational self-consistent field (MCSCF). Correlation 
+		 corrections after these SCF calculations can be estimated by configuration interaction (CI), 
+		 second order Moller-Plesset perturbation theory (MP2), and coupled cluster (CC) theory.
+		 version: 2019R2 (US)
+		 website: http://www.msg.chem.iastate.edu
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	gamess-us
+set             GMSPATH            /public/software/apps/gamess-us/2019R2/hpcx-2.4.1-intel2017
+setenv          GMSPATH            /public/software/apps/gamess-us/2019R2/hpcx-2.4.1-intel2017
+prepend-path    PATH               ${GMSPATH}

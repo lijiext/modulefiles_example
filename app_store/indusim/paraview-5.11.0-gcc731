@@ -1,0 +1,3 @@
+#%Module1.0
+setenv MESA_GL_VERSION_OVERRIDE {3.3};
+prepend-path PATH {/public/software/apprepo/paraview/5.11.0-gcc731/app/bin};

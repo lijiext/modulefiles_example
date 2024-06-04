@@ -1,0 +1,18 @@
+#%Module 1.0
+module-whatis	"Tensors and Dynamic neural networks in Python with strong GPU acceleration. 
+		 PyTorch is a deep learning framework that puts Python first.
+		 version: 1.8.0
+		 website: https://pytorch.org/
+"
+#module load 		compiler/dtk/21.04
+module load 		mpi/hpcx/gcc-7.3.1
+conflict 	Tensorflow
+conflict	Pytorch
+
+
+set             TORCH_HOME              /public/software/apps/DeepLearning/PyTorch/pytorch_1.8
+set             PYTHON_PATH             /public/software/apps/DeepLearning/PyTorch/pytorch_1.8
+set 		APP_HOME 		/public/software/apps/deeplearning-depend
+prepend-path    PYTHONPATH              ${PYTHON_PATH}
+prepend-path    PATH                    ${TORCH_HOME}/bin   
+prepend-path 	LD_LIBRARY_PATH 	${APP_HOME}/lib:${APP_HOME}/gflags-2.1.2-build/lib:${APP_HOME}/glog-build/lib:${APP_HOME}/hiredis-0.12.0-build/lib:${APP_HOME}/leveldb-1.22-build/lib:${APP_HOME}/lib/lib:${APP_HOME}/lmdb-0.9.24-build/lib:${APP_HOME}/openblas-0.3.7-build/lib:${APP_HOME}/opencv-2.4.13.6-build/lib:${APP_HOME}/openmp-build/lib:${TORCH_HOME}/lib

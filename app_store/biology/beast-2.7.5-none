@@ -1,0 +1,7 @@
+#%Module1.0
+setenv JAVA_HOME {/public/software/apprepo/beast/2.7.5-none/app/beast/jre};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/beast/2.7.5-none/app/beast/lib:};
+prepend-path PATH {/public/software/apprepo/beast/2.7.5-none/app/beast/bin};
+prepend-path PATH {/public/software/apprepo/beast/2.7.5-none/app/beast/jre/bin};
+setenv PROGLIST {/public/software/apprepo/beast/2.7.5-none/app/beast/bin/beast};
+setenv CLASSPATH {.:/public/software/apprepo/beast/2.7.5-none/app/beast/jre/lib/dt.jar:/public/software/apprepo/beast/2.7.5-none/app/beast/jre/lib/tools.jar};

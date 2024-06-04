@@ -1,0 +1,22 @@
+#%Module1.0
+
+#installe par François
+proc ModulesHelp { } {
+    puts stderr "OPENMPI MPI utilities for Mellanox MXM and gcc-4.8.5."
+    puts stderr "See http://www.open-mpi.org/"
+}
+
+module-whatis   "OPENMPI MPI utilities for IB/gcc compiler"
+
+conflict mpi
+module load compiler/intel/2017.5.239
+set             MPI_HOME                /public/software/mpi/openmpi/3.1.4
+set          HWLOC_DIR               /public/software/compiler/hwloc-1.9.1
+
+prepend-path    PATH                    ${MPI_HOME}/bin
+prepend-path    PATH                    ${HWLOC_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${MPI_HOME}/lib
+prepend-path    LD_LIBRARY_PATH         ${HWLOC_DIR}/lib
+prepend-path    INCLUDE                 ${MPI_HOME}/include
+prepend-path    MANPATH                 ${MPI_HOME}/share/man
+

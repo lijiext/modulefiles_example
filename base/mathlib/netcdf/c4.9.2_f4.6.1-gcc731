@@ -1,0 +1,21 @@
+#%Module1.0
+module-whatis	"NetCDF (Network Common Data Form) is a set of software libraries and 
+		 machine-independent data formats that support the creation, access, 
+		 and sharing of array-oriented scientific data. It is also a community 
+		 standard for sharing scientific data. 
+		 version: 4.4.1
+		 website: https://www.unidata.ucar.edu/software/netcdf/
+"
+#module load		compiler/intel/2017.5.239
+module load compiler/devtoolset/7.3.1
+module load mathlib/zlib/1.2.8-gcc-7.3.1
+module load mathlib/hdf5/1.12.2-gnu-7.3.1
+conflict 	mathlib/netcdf
+set             NETCDF4_DIR             /public/software/mathlib/netcdf/c4.9.2_f4.6.1
+prepend-path    NETCDF                  ${NETCDF4_DIR}
+prepend-path    PATH                    ${NETCDF4_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${NETCDF4_DIR}/lib
+prepend-path    PKG_CONFIG_PATH         ${NETCDF4_DIR}/lib/pkgconfig
+prepend-path    C_INCLUDE_PATH          ${NETCDF4_DIR}/include
+prepend-path    CPLUS_INCLUDE_PATH      ${NETCDF4_DIR}/include
+prepend-path    MANPATH                 ${NETCDF4_DIR}/share/man

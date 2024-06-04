@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"The UDUNITS package supports units of physical quantities. Its C library 
+		 provides for arithmetic manipulation of units and for conversion of numeric 
+		 values between compatible units. The package contains an extensive unit 
+		 database, which is in XML format and user-extendable. The package also contains 
+		 a command-line utility for investigating units and converting values.
+		 version: 2.2.25
+		 website: https://www.unidata.ucar.edu/software/udunits
+"
+module load		compiler/intel/2017.5.239
+conflict 	mathlib/udunits
+set             UDUNITS_HOME            /public/software/mathlib/udunits/2.2.25/intel
+prepend-path	PATH			${UDUNITS_HOME}/bin	
+prepend-path    LD_LIBRARY_PATH         ${UDUNITS_HOME}/lib
+prepend-path    INCLUDE                 ${UDUNITS_HOME}/include

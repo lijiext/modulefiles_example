@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "ABINIT is a software suite to calculate the optical, mechanical, vibrational, 
+		 and other observable properties of materials. Starting from the quantum equations 
+		 of density functional theory, you can build up to advanced applications with 
+		 perturbation theories based on DFT, and many-body Green's functions (GW and DMFT).
+		 version: Abinit 8.10.3
+		 website: https://www.abinit.org/
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	abinit
+set             APPS_HOME               /public/software/apps/abinit/8.10.3/hpcx-2.4.1-intel2017
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PKG_CONFIG_PATH		${APPS_HOME}/lib/pkgconfig
+

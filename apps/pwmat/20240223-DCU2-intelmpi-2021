@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "pwmat"
+
+module load mpi/intelmpi/2021.3.0
+module load compiler/intel/2021.3.0 
+module load compiler/dtk/23.04.1
+module load compiler/gcc/9.3.0
+
+conflict         apps/pwmat
+
+set              APPS_HOME                /public/software/apps/pwmat/20240223
+
+prepend-path     PATH                     ${APPS_HOME}/bin

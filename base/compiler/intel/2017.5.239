@@ -1,0 +1,23 @@
+#%Module1.0
+proc ModulesHelp { } {
+    puts stderr "Intel Compiler "
+}
+
+module-whatis   "Intel software tools environment for developing Fortran, C, and/or C++ code using 
+		 Intel® Compilers, include Intel® Math Kernel Library
+		 version: 2017.5.239
+		 website: https://www.intel.com/
+"
+conflict compiler/intel
+set             CP_INTEL_DIR            /opt/hpc/software/compiler/intel/intel-compiler-2017.5.239
+prepend-path    PATH                    ${CP_INTEL_DIR}/bin/intel64
+prepend-path    LD_LIBRARY_PATH         ${CP_INTEL_DIR}/compiler/lib/intel64_lin:${CP_INTEL_DIR}/mkl/lib/intel64_lin:${CP_INTEL_DIR}/tbb/lib/intel64_lin
+prepend-path 	LIBRARY_PATH		${CP_INTEL_DIR}/compiler/lib/intel64_lin:${CP_INTEL_DIR}/mkl/lib/intel64_lin:${CP_INTEL_DIR}/tbb/lib/intel64_lin
+prepend-path 	MANPATH			${CP_INTEL_DIR}/man/en_US
+prepend-path 	INCLUDE			${CP_INTEL_DIR}/mkl/include
+prepend-path 	FPATH			${CP_INTEL_DIR}/mkl/include
+prepend-path 	CPATH			${CP_INTEL_DIR}/mkl/include
+prepend-path 	INTEL_LICENSE_FILE	${CP_INTEL_DIR}/licenses
+prepend-path 	MKLROOT			${CP_INTEL_DIR}/mkl
+prepend-path 	TBBROOT			${CP_INTEL_DIR}/tbb
+prepend-path 	NLSPATH			${CP_INTEL_DIR}/compiler/lib/intel64_lin/locale/%l_%t/%N:${CP_INTEL_DIR}/mkl/lib/intel64_lin/locale/%l_%t/%N

@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis	"Quantum ESPRESSO is an integrated suite of computer codes for 
+		 electronic-structure calculations and materials modeling at the 
+		 nanoscale. It is based on density-functional theory, plane waves, 
+		 and pseudopotentials (both norm-conserving and ultrasoft).
+		 version: 6.6
+		 website: https://www.quantum-espresso.org
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict 	qe
+set             APPS_HOME                /public/software/apps/quantum_espresso/6.6
+prepend-path    PATH                    ${APPS_HOME}/bin

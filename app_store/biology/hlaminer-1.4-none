@@ -1,0 +1,4 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/hlaminer/1.4-none/app/hlaminer/bin};
+prepend-path PATH {/public/software/apprepo/hlaminer/1.4-none/app/bwa};
+setenv PROGLIST {/public/software/apprepo/hlaminer/1.4-none/app/hlaminer/bin};

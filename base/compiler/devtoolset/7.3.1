@@ -1,0 +1,31 @@
+#%Module1.0
+
+proc ModulesHelp { } {
+
+    puts stderr " "
+    puts stderr "This module loads the Developer Toolset 7.3.1"
+    puts stderr " "
+    puts stderr "See the man pages for gcc, g++, and gfortran for detailed information"
+    puts stderr "on available compiler options and command-line syntax."
+    puts stderr " "
+
+}
+module-whatis 	"Developer Toolset is designed for developers working on CentOS or Red Hat 
+		 Enterprise Linux platform. It provides current versions of the GNU Compiler 
+		 Collection, GNU Debugger, and other development, debugging, and performance 
+		 monitoring tools.
+		 version: 7.3.1
+		 website: https://www.softwarecollections.org/en/scls/rhscl/devtoolset-7/
+"
+conflict	compiler/gcc
+
+set             DEVTOOLSET_DIR     /opt/rh/devtoolset-7/root
+prepend-path    PATH               ${DEVTOOLSET_DIR}/usr/bin
+prepend-path    MANPATH            ${DEVTOOLSET_DIR}/usr/share/man
+prepend-path    INFOPATH           ${DEVTOOLSET_DIR}/usr/share/info
+prepend-path    PERL5LIB           ${DEVTOOLSET_DIR}/usr/lib64/perl5/vendor_perl:${DEVTOOLSET_DIR}/usr/share/perl5/vendor_perl
+prepend-path    LD_LIBRARY_PATH    ${DEVTOOLSET_DIR}/usr/lib64:${DEVTOOLSET_DIR}/usr/lib
+#prepend-path    PYTHONPATH         ${DEVTOOLSET_DIR}/usr/lib64/python2.7/site-packages:${DEVTOOLSET_DIR}/usr/lib/python2.7/site-packages
+prepend-path    C_INCLUDE_PATH     ${DEVTOOLSET_DIR}/usr/include/c++/7:${DEVTOOLSET_DIR}/usr/include/c++/7/x86_64-redhat-linux
+prepend-path    CPLUS_INCLUDE_PATH ${DEVTOOLSET_DIR}/usr/include/c++/7:${DEVTOOLSET_DIR}/usr/include/c++/7/x86_64-redhat-linux
+setenv          LDFLAGS            "-Wl,-rpath=/opt/rh/devtoolset-7/root/usr/lib64 -Wl,-rpath=/opt/rh/devtoolset-7/root/usr/lib"

@@ -1,0 +1,7 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/orca/5.0.4-openmpi411/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/orca/5.0.4-openmpi411/app/lib:/public/software/apprepo/orca/5.0.4-openmpi411/app:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/orca/5.0.4-openmpi411/app/include:};
+prepend-path PATH {/public/software/apprepo/orca/5.0.4-openmpi411/app/bin};
+prepend-path PATH {/public/software/apprepo/orca/5.0.4-openmpi411/app};
+setenv PROGLIST {/public/software/apprepo/orca/5.0.4-openmpi411/app/orca};

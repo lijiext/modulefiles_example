@@ -1,0 +1,5 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/bismark/0.22.3-none/app/python3/bin};
+prepend-path PATH {/public/software/apprepo/bismark/0.22.3-none/app/bismark};
+prepend-path PATH {/public/software/apprepo/bismark/0.22.3-none/app/bowtie2};
+setenv PROGLIST {/public/software/apprepo/bismark/0.22.3-none/app/bismark/bismark};

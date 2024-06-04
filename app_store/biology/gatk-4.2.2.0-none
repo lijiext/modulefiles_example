@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "A genomic analysis toolkit focused on variant discovery.  The GATK is the industry standard 
+                 for identifying SNPs and indels in germline DNA and RNAseq data. Its scope is now expanding 
+                 to include somatic short variant calling, and to tackle copy number (CNV) and structural 
+                 variation (SV). In addition to the variant callers themselves, the GATK also includes many 
+                 utilities to perform related tasks such as processing and quality control of high-throughput 
+                 sequencing data, and bundles the popular Picard toolkit.
+                 version: 4.2.2.0
+                 website: https://gatk.broadinstitute.org/hc/en-us
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/gatk/4.2.2.0-none/app
+prepend-path    PATH                    ${APPS_HOME}/
+prepend-path    PROGLIST    ${APPS_HOME}/gatk

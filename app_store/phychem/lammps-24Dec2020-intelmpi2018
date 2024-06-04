@@ -1,0 +1,8 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/lib64:};
+setenv PKG_CONFIG_PATH {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/lib64/pkgconfig:};
+setenv LIBRARY_PATH {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/lib64:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/include:};
+prepend-path PATH {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/bin};
+setenv PROGLIST {/public/software/apprepo/lammps/24Dec2020-intelmpi2018/app/bin/lmp_mpi};

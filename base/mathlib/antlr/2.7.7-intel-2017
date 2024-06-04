@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis	"ANTLR (ANother Tool for Language Recognition) is a powerful parser generator 
+		 for reading, processing, executing, or translating structured text or binary files.
+		 version: 2.7.7
+		 website: https://www.antlr.org/
+"
+conflict mathlib/antlr
+#prereq	compiler/intel
+set             ANTLR_HOME              /public/software/mathlib/antlr/2.7.7/intel
+prepend-path	PATH			${ANTLR_HOME}/bin	
+prepend-path    LD_LIBRARY_PATH         ${ANTLR_HOME}/lib
+prepend-path    INCLUDE                 ${ANTLR_HOME}/include

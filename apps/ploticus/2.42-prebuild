@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "Ploticus is a free GPL software utility that can produce various types of plots 
+		 and graphs like shown here and here. Data input is usually csv files or text files 
+		 such as used with sort, awk, etc. Output options are GIF, PNG, PostScript, SVG and 
+		 some others. HTML imagemaps are supported. Ploticus can produce just-in-time plots 
+		 in dynamic web content systems, or in batch production settings. It can be invoked 
+		 from your command line, in shell scripts, via system() calls in web content 
+		 environments and other programs, or via the libploticus API.
+		 version: 2.42
+		 website: http://ploticus.sourceforge.net
+"
+#prereq
+conflict	ploticus
+set             APPS_HOME               /public/software/apps/ploticus/2.42
+prepend-path    PATH                    ${APPS_HOME}/bin

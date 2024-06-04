@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis   "DUNE, the Distributed and Unified Numerics Environment is a modular toolbox for 
+		 solving partial differential equations (PDEs) with grid-based methods. It supports 
+		 the easy implementation of methods like Finite Elements (FE), Finite Volumes (FV), 
+		 and also Finite Differences (FD).
+		 version: 2.8
+		 website: https://www.dune-project.org/
+"
+module load   	mpi/hpcx/gcc-7.3.1
+conflict 	DUNE
+set             APPS_HOME               /public/software/apps/DUNE/2.8/hpcx-2.4.1-gcc-7.3.1 
+prepend-path    PATH                    ${APPS_HOME}/bin
+#prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib64
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib64/pkgconfig
+prepend-path    INCLUDE         	${APPS_HOME}/include
+prepend-path    MANPATH        		${APPS_HOME}/share/man

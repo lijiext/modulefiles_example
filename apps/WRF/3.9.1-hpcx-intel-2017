@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "The Weather Research and Forecasting (WRF) Model is a next-generation mesoscale 
+		 numerical weather prediction system designed to serve both operational forecasting 
+		 and atmospheric research needs.
+		 version: 3.9.1
+		 website: https://www2.mmm.ucar.edu/wrf/users  https://github.com/wrf-model/WRF
+"
+module load		mpi/hpcx/intel-2017.5.239
+module load		mathlib/netcdf/4.4.1-intel-2017
+module load		mathlib/hdf5/1.8.20-intel-2017
+module load 		mathlib/pnetcdf/1.12.1-hpcx-intel-2017
+conflict	WRF
+set             APPS_HOME            /public/software/apps/WRF/3.9.1/ 
+prepend-path    PATH                 ${APPS_HOME}/run

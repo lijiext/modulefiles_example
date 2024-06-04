@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "HTSeq is a Python library to facilitate programmatic analysis of data from 
+		 high-throughput sequencing (HTS) experiments. A popular component of HTSeq is 
+		 htseq-count, a script to quantify gene expression in bulk and single-cell 
+		 RNA-Seq and similar experiments.
+                 version: 2.0.1
+                 website: https://htseq.readthedocs.io/en/master/index.html 
+"
+#prereq
+module use /public/software/Biosoft/modules
+module load  python/3.9.6-gcc485 
+set             APPS_HOME   /public/software/apprepo/htseq/2.0.1-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PYTHONPATH              ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/bin/htseq-count

@@ -1,0 +1,27 @@
+#%Module1.0
+module-whatis "
+	Installed packages:
+ASPHERE BODY CLASS2 COLLOID COMPRESS CORESHELL DIPOLE GRANULAR KSPACE MANYBODY 
+MC MISC MLIAP MOLECULE OPT PERI POEMS PYTHON QEQ REPLICA RIGID SHOCK SNAP SPIN 
+SRD USER-BOCS USER-CGDNA USER-CGSDK USER-COLVARS USER-DIFFRACTION USER-DPD 
+USER-DRUDE USER-EFF USER-FEP USER-MEAMC USER-MESODPD USER-MISC USER-MOFFF 
+USER-OMP USER-PHONON USER-REACTION USER-REAXC USER-SDPD USER-SMD USER-SPH 
+USER-UEF USER-YAFF VORONOI 
+"
+
+module load compiler/intel/2017.5.239
+module load mpi/intelmpi/2017.4.239
+module load mathlib/fftw/3.3.8-intel-2017-double
+
+conflict	lammps
+
+set             LAMMPS_ROOT             /public/software/apps/lammps/29Oct20
+
+prepend-path    PATH                    ${LAMMPS_ROOT}/bin
+prepend-path    LIBRARY_PATH            ${LAMMPS_ROOT}/lib
+prepend-path    LIBRARY_PATH            ${LAMMPS_ROOT}/lib64
+prepend-path    LD_LIBRARY_PATH         ${LAMMPS_ROOT}/lib
+prepend-path    LD_LIBRARY_PATH         ${LAMMPS_ROOT}/lib64
+prepend-path    INCLUDE                 ${LAMMPS_ROOT}/include
+prepend-path    MANPATH                 ${LAMMPS_ROOT}/share/man
+prepend-path    PKG_CONFIG_PATH         ${LAMMPS_ROOT}/lib64/pkgconfig

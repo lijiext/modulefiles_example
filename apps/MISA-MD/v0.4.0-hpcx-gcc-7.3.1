@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "MISA-MD, A molecular dynamics (MD) simulation program of 10^13 atoms.
+		 version: 0.4.0
+		 website: https://github.com/misa-md/MISA-MD
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict	MISA-MD
+set             APPS_HOME               /public/software/apps/MISA-MD/v0.4.0
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    INCLUDE                 ${APPS_HOME}/include

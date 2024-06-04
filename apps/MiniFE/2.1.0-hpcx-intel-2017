@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "MiniFE is an proxy application for unstructured implicit finite element codes. It is 
+		 similar to HPCCG and pHPCCG but provides a much more complete vertical covering of the 
+		 steps in this class of applications. MiniFE also provides support for computation on 
+		 multicore nodes, including pthreads and Intel Threading Building Blocks (TBB) for 
+		 homogeneous multicore and CUDA for GPUs. 
+		 version: 2.1.0 
+		 website: https://github.com/Mantevo/miniFE
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict 	MiniFE
+set             APPS_HOME               /public/software/apps/MiniFE/2.1.0/hpcx-2.4.1-intel2017
+prepend-path    PATH                    ${APPS_HOME}

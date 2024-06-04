@@ -1,0 +1,18 @@
+#%Module1.0
+module-whatis   "RagTag is a collection of software tools for scaffolding and improving modern genome assemblies. 
+		 Tasks include:
+		    Homology-based misassembly correction
+		    Homology-based assembly scaffolding and patching
+		    Scaffold merging
+                 version: 2.1.0
+                 website: https://github.com/malonge/RagTag
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/ragtag/2.1.0-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PYTHONPATH              ${APPS_HOME}/lib/python3.9/site-packages
+prepend-path	LD_LIBRARY_PATH		${APPS_HOME}/lib
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib/pkgconfig
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    MANPATH			${APPS_HOME}/man
+prepend-path    PROGLIST    ${APPS_HOME}/bin/ragtag.py

@@ -1,0 +1,10 @@
+#%Module1.0
+module-whatis	"ImageMagick is free software delivered as a ready-to-run binary distribution 
+		 or as source code that you may use, copy, modify, and distribute in both open 
+		 and proprietary applications.
+		 version: 7.0.10
+		 website: https://imagemagick.org/
+"
+conflict ImageMagick
+set             ImageMagick_DIR         /public/software/mathlib/ImageMagick/7.0.10/gnu 
+prepend-path    PATH                    ${ImageMagick_DIR}/bin

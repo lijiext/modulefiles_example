@@ -1,0 +1,18 @@
+#%Module1.0
+
+#installe par François
+proc ModulesHelp { } {
+    puts stderr "ROCm - Open Source Platform for HPC and Ultrascale GPU Computing"
+}
+
+module-whatis   "AMD ROCm is open-source software development platform for HPC/Hyperscale-class 
+		 GPU computing (ROCm HIP/HCC/OpenCL compiler). 
+		 version: 3.3
+		 website: https://github.com/RadeonOpenCompute/ROCm
+"
+conflict compiler/rocm
+set             ROCM_DIR           /opt/rocm
+prepend-path    PATH               ${ROCM_DIR}/bin:${ROCM_DIR}/profiler/bin:${ROCM_DIR}/opencl/bin/x86_64:${ROCM_DIR}/hcc/bin:${ROCM_DIR}/hip/bin
+prepend-path    LD_LIBRARY_PATH    ${ROCM_DIR}/lib:${ROCM_DIR}/lib64:${ROCM_DIR}/opencl/lib/x86_64:${ROCM_DIR}/hsa/lib:${ROCM_DIR}/hcc/lib:${ROCM_DIR}/hip/lib:${ROCM_DIR}/rocblas/lib:${ROCM_DIR}/hipblas/lib
+prepend-path    C_INCLUDE_PATH     ${ROCM_DIR}/include
+prepend-path    CPLUS_INCLUDE_PATH ${ROCM_DIR}/include

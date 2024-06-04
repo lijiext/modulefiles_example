@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/wrf_wps/4.5-intelmpi2017/app/mathlib/lib:};
+prepend-path PATH {/public/software/apprepo/wrf_wps/4.5-intelmpi2017/app/WRF/main};
+prepend-path PATH {/public/software/apprepo/wrf_wps/4.5-intelmpi2017/app/WPS};
+setenv PROGLIST {/public/software/apprepo/wrf_wps/4.5-intelmpi2017/app/WRF/main/wrf.exe};

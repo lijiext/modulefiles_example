@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "BWA (Burrows-Wheeler Aligner) is a software package for mapping low-divergent 
+                 sequences against a large reference genome, such as the human genome. It consists 
+                 of three algorithms: BWA-backtrack, BWA-SW and BWA-MEM.  
+                 version: 0.7.15
+                 website: http://bio-bwa.sourceforge.net/
+"
+set             APPS_HOME   /public/software/apprepo/bwa/0.7.15-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    MANPATH                 ${APPS_HOME}/man
+
+prepend-path    PROGLIST    ${APPS_HOME}/bwa

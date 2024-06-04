@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/MaskRcnn/1.0-dtk22.10/app/mrcnn_tensorflow1.15_py39_dtk22.10/lib:};
+prepend-path PATH {/public/software/apprepo/MaskRcnn/1.0-dtk22.10/app/mrcnn_tensorflow1.15_py39_dtk22.10/bin};
+setenv MIOPEN_FIND_MODE {3};
+setenv PROGLIST {};

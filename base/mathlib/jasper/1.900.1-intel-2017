@@ -1,0 +1,16 @@
+#%Module1.0
+module-whatis	"The JasPer Project is an open-source initiative to provide a free software-based 
+		 reference implementation of the codec specified in the JPEG-2000 Part-1 standard.
+		 (i.e., ISO/IEC 15444-1). 
+		 version: 1.900.1
+		 website: https://www.ece.uvic.ca/~frodo/jasper/
+"
+set             JASPER_DIR                /public/software/mathlib/jasper/1.900.1/intel
+#prereq		compiler/intel
+conflict 	mathlib/jasper
+
+prepend-path    PATH                    ${JASPER_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${JASPER_DIR}/lib
+prepend-path    INCLUDE                 ${JASPER_DIR}/include
+prepend-path    MANPATH                 ${JASPER_DIR}/share/man
+setenv          JASPER_ROOT             ${JASPER_DIR}

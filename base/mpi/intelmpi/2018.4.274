@@ -1,0 +1,12 @@
+#%Module1.0
+
+module-whatis   "IntelMPI MPI utilities for IB/intel compiler"
+conflict mpi
+
+set             MPI_HOME                /public/software/mpi/intelmpi/2018.4.274
+
+setenv          I_MPI_ROOT              /public/software/mpi/intelmpi/2018.4.274
+prepend-path    PATH                    ${MPI_HOME}/intel64/bin
+prepend-path    LD_LIBRARY_PATH         ${MPI_HOME}/intel64/lib:${MPI_HOME}/intel64/lib/release:${MPI_HOME}/intel64/lib/release_mt:${MPI_HOME}/intel64/lib/debug:${MPI_HOME}/intel64/lib/debug_mt
+prepend-path    MANPATH                 ${MPI_HOME}/man
+prepend-path    INCLUDE                 ${MPI_HOME}/intel64/include

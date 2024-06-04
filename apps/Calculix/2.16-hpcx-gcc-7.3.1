@@ -1,0 +1,18 @@
+#%Module1.0
+module-whatis   "CalculiX is a package designed to solve field problems. The method used is the finite element method.
+		 With CalculiX Finite Element Models can be built, calculated and post-processed. The pre- and post-processor 
+		 is an interactive 3D-tool using the openGL API. The solver is able to do linear and non-linear calculations. 
+		 Static, dynamic and thermal solutions are available. Both programs can be used independently. Because the 
+		 solver makes use of the abaqus input format it is possible to use commercial pre-processors as well. In turn 
+		 the pre-processor is able to write mesh related data for nastran, abaqus, ansys, code-aster and for the free-cfd 
+		 codes dolfyn, duns, ISAAC and OpenFOAM. A simple step reader is included. 
+		 In addition external CAD interfaces are available. 
+		 version: 2.16
+		 website: http://www.calculix.de
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict 	CalculiX
+set             APPS_HOME               /public/software/apps/CalculiX/2.16/hpcx-2.4.1-gcc-7.3.1
+prepend-path    PATH                    ${APPS_HOME}
+
+##http://www.dhondt.de/ccx_2.19.src.tar.bz2

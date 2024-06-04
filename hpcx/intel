@@ -1,0 +1,90 @@
+##%Module1.0
+module-whatis   "NVIDIA® HPC-X® is a comprehensive software package that includes Message 
+                 Passing Interface (MPI), Symmetrical Hierarchical Memory (SHMEM) and Partitioned 
+                 Global Address Space (PGAS) communications libraries, and various acceleration packages.
+                 version: 2.11.0
+                 website: https://developer.nvidia.com/networking/hpc-x
+"
+
+#set fn      $ModulesCurrentModulefile
+#set fn      [file normalize $ModulesCurrentModulefile]
+#
+#if {[file type $fn] eq "link"} {
+#   set fn [ exec readlink -f $fn]
+#}
+#
+#set mydir_base  [ file dirname $fn ]
+#set mydir_base  [ file dirname $mydir_base ]
+#set mydir       [ file normalize $mydir_base ]
+#
+module load              compiler/intel/2017.5.239
+conflict            mpi/hpcx
+set hpcx_dir        /opt/hpc/software/mpi/hpcx/v2.11.0
+set hpcx_mpi_dir    $hpcx_dir/intel-2017.5.239
+set ucx_dir         $hpcx_dir/ucx_without_rocm
+set hcoll_dir       $hpcx_dir/hcoll
+set sharp_dir       $hpcx_dir/sharp
+
+module-whatis   Mellanox HPC-X toolkit
+
+setenv HPCX_DIR             $hpcx_dir
+setenv HPCX_HOME            $hpcx_dir
+
+setenv HPCX_UCX_DIR         $ucx_dir
+setenv HPCX_SHARP_DIR       $sharp_dir
+setenv HPCX_HCOLL_DIR       $hcoll_dir
+
+setenv HPCX_MPI_DIR         $hpcx_mpi_dir
+setenv HPCX_OSHMEM_DIR      $hpcx_mpi_dir
+
+prepend-path    PATH    $ucx_dir/bin
+prepend-path    PATH    $hcoll_dir/bin
+
+prepend-path    LD_LIBRARY_PATH $ucx_dir/lib
+prepend-path    LD_LIBRARY_PATH $hcoll_dir/lib
+prepend-path    LD_LIBRARY_PATH $sharp_dir/lib
+
+prepend-path    LIBRARY_PATH $ucx_dir/lib
+prepend-path    LIBRARY_PATH $hcoll_dir/lib
+prepend-path    LIBRARY_PATH $sharp_dir/lib
+
+prepend-path    CPATH   $hcoll_dir/include
+prepend-path    CPATH   $sharp_dir/include
+prepend-path    CPATH   $ucx_dir/include
+prepend-path    CPATH   $hpcx_mpi_dir/include
+
+prepend-path    INCLUDE   $hcoll_dir/include
+prepend-path    INCLUDE   $sharp_dir/include
+prepend-path    INCLUDE   $ucx_dir/include
+
+prepend-path    MANPATH         $hpcx_mpi_dir/share/man
+
+# Adding MPI runtime
+
+setenv OPAL_PREFIX          $hpcx_mpi_dir
+setenv OMPI_HOME            $hpcx_mpi_dir
+setenv MPI_HOME             $hpcx_mpi_dir
+setenv OSHMEM_HOME          $hpcx_mpi_dir
+setenv SHMEM_HOME           $hpcx_mpi_dir
+
+prepend-path    PATH	   $hpcx_mpi_dir/bin
+prepend-path    LD_LIBRARY_PATH $hpcx_mpi_dir/lib
+prepend-path    LIBRARY_PATH 	$hpcx_mpi_dir/lib
+prepend-path    INCLUDE   	$hpcx_mpi_dir/include
+
+
+# Adding OMPI runtime parameters
+#setenv UCX_IB_ADDR_TYPE     ib_global
+setenv OMPI_MCA_pml "ucx"
+setenv OMPI_MCA_btl "^uct"
+setenv UCX_DC_MLX5_NUM_DCI  16
+setenv UCX_RNDV_THRESH      auto
+setenv UCX_ZCOPY_THRESH     auto
+setenv UCX_MAX_EAGER_LANES  4
+setenv UCX_MAX_RNDV_LANES   4
+#setenv UCX_IB_PCI_BW        mlx5_0:50Gbs,mlx5_1:50Gbs,mlx5_2:50Gbs,mlx5_3:50Gbs
+#setenv UCX_NET_DEVICES      mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1
+setenv OMPI_MCA_btl_openib_warn_default_gid_prefix             0
+setenv OMPI_MCA_btl_openib_warn_no_device_params_found         0
+setenv OMPI_MCA_coll_hcoll_enable                              0
+#setenv OMPI_MCA_coll_hcoll_np                                  0

@@ -1,0 +1,4 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/bowtie2/2.4.4-none/app/python3/bin};
+prepend-path PATH {/public/software/apprepo/bowtie2/2.4.4-none/app/bowtie2};
+setenv PROGLIST {/public/software/apprepo/bowtie2/2.4.4-none/app/bowtie2/bowtie2};

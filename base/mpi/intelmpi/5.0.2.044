@@ -1,0 +1,37 @@
+#%Module1.0
+module-whatis   "The Intel(R) MPI Library for Linux* OS is a multi-fabric message passing 
+		 library based on ANL MPICH2 and OSU MVAPICH2. The Intel MPI Library for 
+		 Linux OS implements the Message Passing Interface, version 2 (MPI-2) specification.
+		 version: 5.0.2.044
+		 website: http://software.intel.com/en-us/intel-mpi-library/
+"
+conflict	mpi
+module load 	compiler/intel/2015.2.164
+set             MPI_HOME                /public/software/mpi/intelmpi/5.0.2.044
+setenv		I_MPI_ROOT		/public/software/mpi/intelmpi/5.0.2.044
+prepend-path    PATH                    ${MPI_HOME}/intel64/bin
+prepend-path    LD_LIBRARY_PATH         ${MPI_HOME}/intel64/lib
+prepend-path    MANPATH                 ${MPI_HOME}/man
+prepend-path    INCLUDE                 ${MPI_HOME}/intel64/include
+
+#setenv I_MPI_FA`BRICS "shm:ofi"
+#setenv FI_PROVIDER mlx                                                                                                                        
+#setenv I_MPI_OFI_EXPERIMENTAL 1
+#setenv UCX_TLS "self,shm,rc_x"
+
+#setenv I_MPI_DEBUG 5
+setenv I_MPI_FABRICS  "shm:dapl"
+setenv I_MPI_DAPL_UD  1
+setenv I_MPI_DAPL_UD_RDMA_MIXED  1
+setenv I_MPI_LARGE_SCALE_THRESHOLD  8192
+setenv I_MPI_DAPL_UD_ACK_SEND_POOL_SIZE  8704
+setenv I_MPI_DAPL_UD_ACK_RECV_POOL_SIZE  8704
+setenv I_MPI_DAPL_UD_RNDV_EP_NUM  2
+setenv DAPL_UCM_REP_TIME  8000
+setenv DAPL_UCM_RTU_TIME  8000
+setenv DAPL_UCM_RETRY  10
+setenv DAPL_UCM_CQ_SIZE  2000
+setenv DAPL_UCM_QP_SIZE  2000
+setenv DAPL_UCM_DREQ_RETRY  4
+setenv DAPL_UCM_DREP_TIME  200
+setenv DAPL_UCM_WAIT_TIME  10000

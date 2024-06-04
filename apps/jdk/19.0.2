@@ -1,0 +1,11 @@
+#%Module1.0
+
+module-whatis   "jdk-11.0.3"
+
+conflict apps/jdk
+
+set             Jdk_DIR                 /public/software/apps/jdk-19.0.2
+
+prepend-path    JAVA_HOME               ${Jdk_DIR}
+prepend-path    PATH                    ${Jdk_DIR}/bin
+prepend-path    CLASSPATH               ${Jdk_DIR}/lib

@@ -1,0 +1,3 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/openmx/3.9-intelmpi2021/app/lib:};
+prepend-path PATH {/public/software/apprepo/openmx/3.9-intelmpi2021/app/bin};

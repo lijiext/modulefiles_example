@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "Sambamba is a high performance highly parallel robust and fast tool (and library), 
+                 written in the D programming language, for working with SAM and BAM files. Because 
+                 of its efficiency Sambamba is an important work horse running in many sequencing 
+                 centres around the world today. 
+                 version: 0.7.1-prebuild
+                 website: https://github.com/biod/sambamba 
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/sambamba/0.7.1-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/sambamba

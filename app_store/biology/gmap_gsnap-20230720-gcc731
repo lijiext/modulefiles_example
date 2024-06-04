@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_APTH {/public/software/apprepo/gmap_gsnap/20230720-gcc731/app/bin:};
+prepend-path PATH {/public/software/apprepo/gmap_gsnap/20230720-gcc731/app/bin};
+setenv PROGLIST {/public/software/apprepo/gmap_gsnap/20230720-gcc731/app/bin/};

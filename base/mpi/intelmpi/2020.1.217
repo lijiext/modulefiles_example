@@ -1,0 +1,52 @@
+#%Module1.0
+
+module-whatis       "Sets up the Intel(R) MPI Library environment"
+module load compiler/intel/2020.1.217
+
+set             ucx_dir               /opt/hpc/software/mpi/hpcx/v2.11.0/ucx_without_rocm
+prepend-path    PATH    $ucx_dir/bin
+prepend-path    LD_LIBRARY_PATH $ucx_dir/lib
+prepend-path    LIBRARY_PATH $ucx_dir/lib
+prepend-path    CPATH   $ucx_dir/include
+prepend-path    INCLUDE   $ucx_dir/include
+
+set             MPI_HOME                /public/software/compiler/intel/intel-2020/compilers_and_libraries_2020.1.217/mpi
+setenv          I_MPI_ROOT              /public/software/compiler/intel/intel-2020/compilers_and_libraries_2020.1.217/mpi
+prepend-path    CLASSPATH               ${MPI_HOME}/intel64/lib/mpi.jar
+prepend-path    PATH                    ${MPI_HOME}/intel64/bin:${MPI_HOME}/intel64/libfabric/bin
+prepend-path    LD_LIBRARY_PATH         ${MPI_HOME}/intel64/lib:${MPI_HOME}/intel64/lib/release:${MPI_HOME}/intel64/lib/release_mt:${MPI_HOME}/intel64/lib/debug:${MPI_HOME}/intel64/lib/debug_mt:${MPI_HOME}/intel64/libfabric/lib
+prepend-path    MANPATH                 ${MPI_HOME}/man
+prepend-path    INCLUDE                 ${MPI_HOME}/intel64/include
+prepend-path    CPATH                   ${MPI_HOME}/intel64/include
+
+setenv I_MPI_FABRICS "shm:ofi"
+#setenv FI_PROVIDER mlx                                                                                                                        
+setenv UCX_TLS "self,shm,rc_x"
+
+setenv UCX_IB_ADDR_TYPE     ib_global
+setenv UCX_DC_MLX5_NUM_DCI  16
+setenv UCX_MAX_EAGER_LANES  4
+setenv UCX_MAX_RNDV_LANES   4
+setenv UCX_IB_PCI_BW        mlx5_0:50Gbs,mlx5_1:50Gbs,mlx5_2:50Gbs,mlx5_3:50Gbs
+setenv UCX_NET_DEVICES      mlx5_0:1
+
+if { [info exists ::env(I_MPI_OFI_LIBRARY_INTERNAL) ] } {
+    set i_mpi_ofi_library_internal $::env(I_MPI_OFI_LIBRARY_INTERNAL)
+} else {
+    set i_mpi_ofi_library_internal "yes"
+}
+
+switch "" {
+    "0" -
+    "no" -
+    "off" -
+    "disable" {
+    }
+    default {
+        setenv              FI_PROVIDER_PATH       ${MPI_HOME}/intel64/libfabric/lib/prov
+
+        prepend-path        PATH                   ${MPI_HOME}/intel64/libfabric/bin
+        prepend-path        LD_LIBRARY_PATH        ${MPI_HOME}/intel64/libfabric/lib
+        prepend-path        LIBRARY_PATH           ${MPI_HOME}/intel64/libfabric/lib
+    }
+}

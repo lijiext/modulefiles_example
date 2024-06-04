@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "R is a free software environment for statistical computing and graphics.
+		 It compiles and runs on a wide variety of UNIX platforms, Windows and MacOS.
+		 version: 3.6.3
+		 website: https://www.r-project.org/
+"
+#prereq		compiler/devtoolset/7.3.1
+conflict	R
+set             APPS_HOME            /public/software/apps/R-3.6.3
+prepend-path    PATH                 ${APPS_HOME}/bin
+prepend-path	LD_LIBRARY_PATH	     ${APPS_HOME}/lib64
+prepend-path	PKG_CONFIG_PATH	     ${APPS_HOME}/lib64/pkgconfig

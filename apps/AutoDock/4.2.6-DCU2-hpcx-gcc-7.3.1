@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "AutoDock is a suite of automated docking tools. It is designed to predict 
+		 how small molecules, such as substrates or drug candidates, bind to a receptor 
+		 of known 3D structure. Over the years, it has been modified and improved to 
+		 add new functionalities, and multiple engines have been developed. 
+		 version: 4.2.6 with DCU2
+		 website: https://autodock.scripps.edu/
+"
+module load		compiler/dtk/21.10
+conflict	AutoDock
+set             APPS_HOME               /public/software/apps/AutoDock-DCU2/4.2.6
+prepend-path    PATH                    ${APPS_HOME}/bin

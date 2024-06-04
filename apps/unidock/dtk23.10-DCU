@@ -1,0 +1,22 @@
+#%Module1.0
+module purge
+module load singularity/3.7.3
+
+#export BOOST_ROOT=/public/software/unidock/boost_1_72_0/build_sif
+#export BOOST_INCLUDEDIR=$BOOST_ROOT/include
+#export BOOST_LIBRARYDIR=$BOOST_ROOT/lib
+
+#set             APPS_HOME               /work/home/xiamr2022/miniconda3/envs/af2
+module           load singularity/3.7.3
+set             APPS_HOME               /public/software/apps/unidock/install/
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+setenv          BOOST_ROOT              /public/software/unidock/boost_1_72_0/build_sif
+setenv          BOOST_INCLUDEDIR        ${BOOST_ROOT}/include
+setenv          BOOST_LIBRARYDIR        ${BOOST_ROOT}/lib
+#setenv          TF_FORCE_UNIFIED_MEMORY 1
+#setenv          data_path               /public/alphafold
+#setenv          conda_bin_path          ${APPS_HOME}/bin
+#setenv          CONDA_PREFIX            ${APPS_HOME}
+#setenv          XLA_PYTHON_CLIENT_MEM_FRACTION 0.5
+#setenv          XLA_PYTHON_CLIENT_ALLOCATOR platform

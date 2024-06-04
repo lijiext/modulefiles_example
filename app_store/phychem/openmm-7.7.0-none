@@ -1,0 +1,2 @@
+#%Module1.0
+setenv PROGLIST {/public/software/apprepo/openmm/7.7.0-none/app/openmm-7.7.0/bin/python};

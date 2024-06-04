@@ -1,0 +1,17 @@
+#%Module1.0
+module-whatis	"The Models-3/EDSS Input/Output Applications Programming Interface (I/O API) 
+		 provides the environmental model developer with an easy-to-learn, easy-to-use 
+		 programming library for data storage and access, available from both Fortran 
+		 and C. The same routines can be used for both file storage (using netCDF files) 
+		 and model coupling (using PVM mailboxes). It is the standard data access library 
+		 for both the NCSC/CMAS's EDSS project and EPA's Models-3, CMAQ, and SMOKE, as 
+		 well as various other atmospheric and hydrological modeling systems.
+		 version: 3.2
+		 website: https://www.cmascenter.org/ioapi  https://cjcoats.github.io/ioapi/index.html
+"
+module load		compiler/intel/2017.5.239
+conflict 	mathlib/ioapi
+set             IOAPI_HOME              /public/software/mathlib/ioapi/3.2/intel
+prepend-path    PATH                    ${IOAPI_HOME}/Linux2_x86_64ifort
+prepend-path    LD_LIBRARY_PATH         ${IOAPI_HOME}/Linux2_x86_64ifort
+prepend-path    INCLUDE                 ${IOAPI_HOME}/ioapi

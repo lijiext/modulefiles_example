@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/mmdet/2.25.1-QueryInst_dtk23.04/app/QueryInst_dtk23.04_PyTorch1.13_py39/lib:};
+setenv MIOPEN_FIND_MODE {3};
+setenv PROGLIST {};

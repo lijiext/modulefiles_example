@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/nco/4.7.8-intel2017/app/mathlib/lib:/public/software/apprepo/nco/4.7.8-intel2017/app/lib:};
+prepend-path PATH {/public/software/apprepo/nco/4.7.8-intel2017/app/bin};
+prepend-path PATH {/public/software/apprepo/nco/4.7.8-intel2017/app/mathlib/bin};
+setenv PROGLIST {/public/software/apprepo/nco/4.7.8-intel2017/app/bin/ncbo};

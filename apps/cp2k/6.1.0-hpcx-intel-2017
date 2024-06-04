@@ -1,0 +1,33 @@
+#%Module1.0
+module-whatis   "CP2K is a quantum chemistry and solid state physics software package that can perform 
+		 atomistic simulations of solid state, liquid, molecular, periodic, material, crystal, 
+		 and biological systems. CP2K provides a general framework for different modeling methods 
+		 such as DFT using the mixed Gaussian and plane waves approaches GPW and GAPW. Supported 
+		 theory levels include DFTB, LDA, GGA, MP2, RPA, semi-empirical methods (AM1, PM3, PM6, RM1, 
+		 MNDO, …), and classical force fields (AMBER, CHARMM, …). CP2K can do simulations of 
+		 molecular dynamics, metadynamics, Monte Carlo, Ehrenfest dynamics, vibrational analysis, 
+		 core level spectroscopy, energy minimization, and transition state optimization using NEB 
+		 or dimer method.
+		 version: 6.1.0 
+		 website: https://www.cp2k.org/
+"
+#module load		mpi/hpcx/intel-2017.5.239
+conflict	cp2k
+set             APPS_HOME                /public/software/apps/cp2k/6.1.0/hpcx-2.4.1-intel2017/
+set             LIBXC_HOME               /public/software/apps/cp2k/libs/libxc-4.0.3
+set             LIBINT_HOME               /public/software/apps/cp2k/libs/libint-1.1.6
+set             ELPA_HOME               /public/software/apps/cp2k/libs/elpa-2017.05.002
+set             LIBXSMM_HOME               /public/software/apps/cp2k/libs/libxsmm-1.8.3
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PATH                    ${LIBXC_HOME}/bin
+prepend-path    PATH                    ${ELPA_HOME}/bin
+prepend-path    PATH                    ${LIBXSMM_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${LIBXC_HOME}/lib
+prepend-path    LD_LIBRARY_PATH         ${LIBINT_HOME}/lib
+prepend-path    LD_LIBRARY_PATH         ${ELPA_HOME}/lib
+prepend-path    LD_LIBRARY_PATH         ${LIBXSMM_HOME}/lib
+prepend-path    INCLUDE         ${LIBXC_HOME}/include
+prepend-path    INCLUDE         ${LIBINT_HOME}/include
+prepend-path    INCLUDE         ${ELPA_HOME}/include
+prepend-path    INCLUDE        	${LIBXSMM_HOME}/include
+

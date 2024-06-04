@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "BBMap is a splice-aware global aligner for DNA and RNA sequencing reads. It can align reads 
+		 from all major platforms : illumina, 454, Sanger, Ion Torrent, Pac Bio, and Nanopore. BBMap 
+		 is fast and extremely accurate, particularly with highly mutated genomes or reads with long 
+		 indels, even whole-gene deletions over 100kbp long. It has no upper limit to genome size or 
+		 number of contigs, and has been successfully used for mapping to an 85 gigabase soil metagenome 
+		 with over 200 million contigs. Additionally, the indexing phase is very fast compared to other aligners.
+                 version: 38.96
+                 website: https://jgi.doe.gov/data-and-tools/software-tools/bbtools/bb-tools-user-guide/bbmap-guide/
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/bbmap/38.96-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}

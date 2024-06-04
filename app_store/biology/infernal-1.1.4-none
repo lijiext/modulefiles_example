@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "Infernal (\"INFERence of RNA ALignment\") is for searching DNA sequence databases for 
+		 RNA structure and sequence similarities. It is an implementation of a special case of 
+		 profile stochastic context-free grammars called covariance models (CMs). 
+                 version: 1.1.4
+                 website: http://eddylab.org/infernal/
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/infernal/1.1.4-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    MANPATH                 ${APPS_HOME}/share/man
+prepend-path    PROGLIST    ${APPS_HOME}/bin/cmscan

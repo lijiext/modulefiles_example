@@ -1,0 +1,7 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/plumed2/2.9.0-intelmpi2017/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/plumed2/2.9.0-intelmpi2017/app/lib:};
+setenv PLUMED_VIMPATH {/public/software/apprepo/plumed2/2.9.0-intelmpi2017/app/bin/plumed};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/plumed2/2.9.0-intelmpi2017/app/include:};
+prepend-path PATH {/public/software/apprepo/plumed2/2.9.0-intelmpi2017/app/bin};
+setenv PROGLIST {/public/software/apprepo/plumed2/2.9.0-intelmpi2017/app/bin/plumed};

@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "GCTA (Genome-wide Complex Trait Analysis) is a software package initially developed 
+                 to estimate the proportion of phenotypic variance explained by all genome-wide SNPs 
+                 for a complex trait but has been greatly extended for many other analyses of data 
+                 from genome-wide association studies (GWASs). GCTA currently supports the following analyses.
+                 version: 1.93.2beta-prebuild
+                 website: https://yanglab.westlake.edu.cn/software/gcta
+"
+set             APPS_HOME   /public/software/apprepo/gcta/1.93.2beta-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/gcta64

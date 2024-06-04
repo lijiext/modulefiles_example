@@ -1,0 +1,16 @@
+#%Module1.0
+module-whatis   "PROJ is a generic coordinate transformation software that transforms geospatial 
+		 coordinates from one coordinate reference system (CRS) to another. This includes 
+		 cartographic projections as well as geodetic transformations. PROJ is released 
+		 under the X/MIT open source license
+		 version: 4.9.2 
+		 website: https://proj.org/
+"
+module load		compiler/intel/2017.5.239
+conflict 	proj
+set             PROJ_HOME               /public/software/apps/proj/4.9.2/intel
+prepend-path    PATH                    ${PROJ_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${PROJ_HOME}/lib
+prepend-path    PKG_CONFIG_PATH		${PROJ_HOME}/lib/pkgconfig
+prepend-path    INCLUDE                 ${PROJ_HOME}/include
+prepend-path    MANPATH                 ${PROJ_HOME}/share/man

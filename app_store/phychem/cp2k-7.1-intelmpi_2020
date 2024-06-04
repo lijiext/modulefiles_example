@@ -1,0 +1,19 @@
+#%Module1.0
+setenv GSL_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/gsl-2.6};
+setenv ELPA_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libint-v2.6.0-cp2k-lmax-7};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libxsmm-1.14/lib:/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libxc-4.3.4/lib:/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libint-v2.6.0-cp2k-lmax-7/lib:/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/elpa-2019.05.001/lib:/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/fftw-3.3.8/lib:/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/gsl-2.6/lib:/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/plumed-2.4.5/lib:};
+setenv PLUMED_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/plumed-2.4.5};
+setenv LIBXSMM_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/elpa-2019.05.001};
+setenv LIBXC_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libxsmm-1.14};
+setenv LIBINT_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libxc-4.3.4};
+setenv FFTW_HOME {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/fftw-3.3.8};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/plumed-2.4.5/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/gsl-2.6/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/fftw-3.3.8/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/elpa-2019.05.001/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libint-v2.6.0-cp2k-lmax-7/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/deeps/libxsmm-1.14/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/bin};
+prepend-path PATH {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/exe/Linux-x86-64-intel};
+setenv CP2K_DATA_DIR {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/data};
+setenv PROGLIST {/public/software/apprepo/cp2k/7.1-intelmpi_2020/app/exe/Linux-x86-64-intel/cp2k.psmp};

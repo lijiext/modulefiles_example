@@ -1,0 +1,24 @@
+#%Module1.0
+module-whatis   "GROMACS is a versatile package to perform molecular dynamics, i.e. simulate the 
+                 Newtonian equations of motion for systems with hundreds to millions of particles.
+                 It is primarily designed for biochemical molecules like proteins, lipids and nucleic 
+                 acids that have a lot of complicated bonded interactions, but since GROMACS is 
+                 extremely fast at calculating the nonbonded interactions (that usually dominate 
+                 simulations) many groups are also using it for research on non-biological systems.
+                 version: 2022.1 threadmpi with DCU2
+                 website: https://www.gromacs.org/
+"
+module load             compiler/devtoolset/7.3.1
+module load             mpi/hpcx/gcc-7.3.1
+module load             mathlib/fftw/3.3.8-gcc-7.3.1-single
+module load             compiler/dtk/22.10.1
+module load             anaconda3/5.2.0
+conflict        gromacs
+
+set             APPS_HOME               /public/software/apps/Gromacs-DCU2/2022.1/mpi
+setenv          LD_PRELOAD              /public/software/apps/Gromacs-DCU2/2022.1/libhipfft.so
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib64
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib64/pkgconfig
+prepend-path    MANPATH                 ${APPS_HOME}/share/man

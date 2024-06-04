@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/roms/3.6-hpcx_intel2017/app/mathlib:};
+prepend-path PATH {/public/software/apprepo/roms/3.6-hpcx_intel2017/app/install};
+setenv PROGLIST {/public/software/apprepo/roms/3.6-hpcx_intel2017/app/install/oceanM};

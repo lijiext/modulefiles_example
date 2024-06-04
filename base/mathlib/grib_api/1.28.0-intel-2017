@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"grib_api library contains Fortran 90 decoder/encoder routines for GRIB 
+		 edition 1, general date manipulation routines, and a Fortran 90 interface 
+		 to \"C\" language I/O routines. 
+		 version: 1.28.0
+                 website: https://software.ecmwf.int/wiki/display/GRIB/Home
+"
+conflict 	mathlib/grib_api
+module load		compiler/intel/2017.5.239
+set             grib_api_DIR		/public/software/mathlib/grib_api/1.28.0/intel
+
+prepend-path    PATH                    ${grib_api_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${grib_api_DIR}/lib
+prepend-path    INCLUDE                 ${grib_api_DIR}/include
+prepend-path    MANPATH                 ${grib_api_DIR}/share/man

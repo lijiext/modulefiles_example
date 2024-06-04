@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis	"The NCAR Command Language (NCL) is a programming language designed specifically 
+		 for the analysis and visualization of data. NCL can be run in interactive mode, 
+		 where each line is interpreted as it is entered at your workstation, or it can 
+		 be run in batch mode as an interpreter of complete scripts. 
+		 version: 6.5.0
+		 website: https://www.ncl.ucar.edu
+"
+#prereq	
+conflict	ncl_ncarg
+set             NCARG_HOME              /public/software/mathlib/ncl_ncarg/6.5.0/gnu
+prepend-path    NCARG_ROOT              ${NCARG_HOME}
+prepend-path    PATH                    ${NCARG_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${NCARG_HOME}/lib
+prepend-path    INCLUDE                 ${NCARG_HOME}/include/ncarg

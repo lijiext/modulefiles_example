@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis   "The Basic Local Alignment Search Tool (BLAST) finds regions of local similarity between 
+		 sequences. The program compares nucleotide or protein sequences to sequence databases 
+		 and calculates the statistical significance of matches. BLAST can be used to infer functional 
+		 and evolutionary relationships between sequences as well as help identify members of gene families.
+		 version: 2.13.0+ prebuild
+		 website: https://blast.ncbi.nlm.nih.gov/Blast.cgi
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/blast/2.13.0-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PROGLIST    ${APPS_HOME}/bin/blastn

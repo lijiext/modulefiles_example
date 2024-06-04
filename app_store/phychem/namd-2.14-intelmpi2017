@@ -1,0 +1,4 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/namd/2.14-intelmpi2017/NAMD_2.14_Source/Linux-x86_64MPI};
+prepend-path PATH {/public/software/apprepo/namd/2.14-intelmpi2017/app/bin};
+setenv PROGLIST {/public/software/apprepo/namd/2.14-intelmpi2017/NAMD_2.14_Source/Linux-x86_64MPI/namd2};

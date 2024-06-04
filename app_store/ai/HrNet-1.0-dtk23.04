@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/HrNet/1.0-dtk23.04/app/hrnet_torch1.13_dtk2304/lib:};
+setenv MIOPEN_FIND_MODE {3};
+setenv PROGLIST {};

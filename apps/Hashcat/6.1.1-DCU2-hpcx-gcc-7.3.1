@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "hashcat is the world's fastest and most advanced password recovery utility, 
+		 supporting five unique modes of attack for over 300 highly-optimized hashing 
+		 algorithms. hashcat currently supports CPUs, GPUs, and other hardware 
+		 accelerators on Linux, Windows, and macOS, and has facilities to help enable 
+		 distributed password cracking.
+		 version: 6.1.1 with DCU2
+		 website: https://hashcat.net/hashcat   https://github.com/hashcat/hashcat
+"
+module load		mpi/hpcx/gcc-7.3.1
+conflict	Hashcat
+set             APPS_HOME               /public/software/apps/Hashcat-DCU2/6.1.1
+prepend-path    PATH                    ${APPS_HOME}

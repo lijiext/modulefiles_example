@@ -1,0 +1,4 @@
+#%Module1.0
+append-path PATH {/public/software/apprepo/ctk/1.1.4-none/app/ctk-1.1.4};
+setenv PERL5LIB {/public/software/apprepo/ctk/1.1.4-none/app/czplib-1.0.9:/public/software/apprepo/ctk/1.1.4-none/app/perl5/lib/perl5/x86_64-linux-thread-multi:/public/software/apprepo/ctk/1.1.4-none/app/czplib-1.0.9};
+setenv PROGLIST {/public/software/apprepo/ctk/1.1.4-none/app/ctk-1.1.4/fastq_filter.pl};

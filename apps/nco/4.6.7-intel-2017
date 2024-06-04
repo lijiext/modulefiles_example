@@ -1,0 +1,18 @@
+#%Module1.0
+module-whatis	"The NCO toolkit manipulates and analyzes data stored in netCDF-accessible formats, 
+		 including DAP, HDF4, and HDF5. It exploits the geophysical expressivity of many CF 
+		 (Climate & Forecast) metadata conventions, the flexible description of physical 
+		 dimensions translated by UDUnits, the network transparency of OPeNDAP, the storage 
+		 features (e.g., compression, chunking, groups) of HDF (the Hierarchical Data Format), 
+		 and many powerful mathematical and statistical algorithms of GSL (the GNU Scientific 
+		 Library). NCO is fast, powerful, and free.
+		 version: 4.6.7
+		 website: http://nco.sourceforge.net
+"
+module load		compiler/intel/2017.5.239
+conflict	nco
+set             NCO_DIR                /public/software/mathlib/nco/4.6.7/intel 
+prepend-path    LD_LIBRARY_PATH         ${NCO_DIR}/lib
+prepend-path    PATH                    ${NCO_DIR}/bin
+prepend-path    INCLUDE                 ${NCO_DIR}/include
+prepend-path    MANPATH                 ${NCO_DIR}/share/man

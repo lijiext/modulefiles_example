@@ -1,0 +1,4 @@
+#%Module1.0
+setenv PKG_CONFIG_PATH {/public/software/apprepo/fastx_toolkit/0.0.14-gcc485/app/lib/pkgconfig:};
+prepend-path PATH {/public/software/apprepo/fastx_toolkit/0.0.14-gcc485/app/bin};
+setenv PROGLIST {/public/software/apprepo/fastx_toolkit/0.0.14-gcc485/app/bin/fastq_to_fasta};

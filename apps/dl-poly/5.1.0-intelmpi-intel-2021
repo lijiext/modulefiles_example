@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "A general purpose classical molecular dynamics (MD) simulation software. V-5.1.0"
+
+module load compiler/intel/2021.3.0 
+module load mpi/intelmpi/2021.3.0     
+module load compiler/devtoolset/7.3.1 
+module load anaconda3/5.2.0
+
+set             APPS_HOME               /public/software/apps/dl-poly
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib64

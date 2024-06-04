@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_APTH {/public/software/apprepo/glimmerhmm/3.0.4-gcc731/app/bin:};
+prepend-path PATH {/public/software/apprepo/glimmerhmm/3.0.4-gcc731/app/bin};
+setenv PROGLIST {/public/software/apprepo/glimmerhmm/3.0.4-gcc731/app/bin/glimmerhmm};

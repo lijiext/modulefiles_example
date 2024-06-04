@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis	"Singularity is an open source container platform designed to be simple, 
+		 fast, and secure. Singularity is optimized for compute focused enterprise 
+		 and HPC workloads, allowing untrusted users to run untrusted containers 
+		 in a trusted way. 
+		 version: 3.7.3
+		 website: https://sylabs.io/singularity/
+"
+#prereq	
+conflict singularity
+set             APP_HOME                /public/software/apps/singularity/3.7.3
+prepend-path    PATH                    ${APP_HOME}/bin
+#prepend-path    LD_LIBRARY_PATH         ${APP_HOME}/lib
+

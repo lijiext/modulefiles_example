@@ -1,0 +1,3 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/qe/7.0-intel2021/app/bin};
+setenv PROGLIST {/public/software/apprepo/qe/7.0-intel2021/app/bin/pw.x};

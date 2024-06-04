@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "RELION (for REgularised LIkelihood OptimisatioN) is a stand-alone computer program 
+		 for Maximum A Posteriori refinement of (multiple) 3D reconstructions or 2D class 
+		 averages in cryo-electron microscopy. It is developed in the research group of Sjors 
+		 Scheres at the MRC Laboratory of Molecular Biology.
+		 version: 3.1.2
+		 website: http://www2.mrc-lmb.cam.ac.uk/relion     https://github.com/3dem/relion 
+"
+module load		 mpi/intelmpi/2017.4.239
+set             APPS_HOME   /public/software/apprepo/relion/3.1.2-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    PROGLIST    ${APPS_HOME}/bin/relion

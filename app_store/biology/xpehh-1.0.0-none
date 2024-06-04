@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {:/public/software/apprepo/xpehh/1.0.0-none/app/lib};
+append-path PATH {/public/software/apprepo/xpehh/1.0.0-none/app/bin};
+setenv PROGLIST {/public/software/apprepo/xpehh/1.0.0-none/app/bin/xpehh};

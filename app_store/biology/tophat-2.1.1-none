@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "TopHat is a fast splice junction mapper for RNA-Seq reads. It aligns RNA-Seq reads to 
+		 mammalian-sized genomes using the ultra high-throughput short read aligner Bowtie, and 
+		 then analyzes the mapping results to identify splice junctions between exons.
+                 version: 2.1.1 prebuild
+                 website: http://ccb.jhu.edu/software/tophat/index.shtml
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/tophat/2.1.1-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/tophat
+###
+module load anaconda3/5.2.0
+prepend-path    PATH                    ${APPS_HOME}/bowtie2
+prepend-path    PATH                    ${APPS_HOME}/bowtie2/scripts

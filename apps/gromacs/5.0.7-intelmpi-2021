@@ -1,0 +1,9 @@
+#%Module1.0
+#build by liuyd
+module load compiler/intel/2021.3.0
+module load mpi/intelmpi/2021.3.0
+set             APPS_HOME               /public/software/apps/gromacs/5.0.7/intelmpi-2021
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib64
+prepend-path    INCLUDE                 ${APPS_HOME}/include
+prepend-path    MANPATH                 ${APPS_HOME}/share/man

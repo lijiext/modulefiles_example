@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/wannier90/3.1.0-intel2020/app/lib:};
+setenv LIBRARY_PATH {/public/software/apprepo/wannier90/3.1.0-intel2020/app/lib:};
+prepend-path PATH {/public/software/apprepo/wannier90/3.1.0-intel2020/app/bin};
+setenv PROGLIST {/public/software/apprepo/wannier90/3.1.0-intel2020/app/bin/wannier90.x};

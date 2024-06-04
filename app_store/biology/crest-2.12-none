@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {:/public/software/apprepo/crest/2.12-none/app/lib};
+prepend-path PATH {/public/software/apprepo/crest/2.12-none/app/bin};
+setenv PROGLIST {/public/software/apprepo/crest/2.12-none/app/bin/crest};

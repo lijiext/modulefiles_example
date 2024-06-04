@@ -1,0 +1,4 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/plumed/v2.9.0-intel2021/app/lib:};
+prepend-path PATH {/public/software/apprepo/plumed/v2.9.0-intel2021/app/bin};
+setenv PROGLIST {/public/software/apprepo/plumed/v2.9.0-intel2021/app/bin/plumed};

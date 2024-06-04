@@ -1,0 +1,11 @@
+#%Module1.0
+module-whatis   "LASTZ is a program for aligning DNA sequences, a pairwise aligner. Originally designed to 
+		 handle sequences the size of human chromosomes and from different species, it is also useful 
+		 for sequences produced by NGS sequencing technologies such as Roche 454.
+		 version: 1.03.73
+		 website: https://www.bx.psu.edu/~rsharris/lastz/
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/lastz/1.03.73-none/app
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    PROGLIST    ${APPS_HOME}/bin/lastz

@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "TensorFlow is an end-to-end open source platform for machine learning. It has a 
+		 comprehensive, flexible ecosystem of tools, libraries, and community resources 
+		 that lets researchers push the state-of-the-art in ML and developers easily build 
+		 and deploy ML-powered applications.
+		 version: 1.15.1-cp3.6
+		 website: https://tensorflow.org/ 
+"
+module load 		compiler/dtk/21.10
+conflict 	anaconda3
+conflict 	Tensorflow
+set             APPS_HOME                /public/software/apps/Tensorflow/1.15.2
+prepend-path    PATH                    ${APPS_HOME}/bin

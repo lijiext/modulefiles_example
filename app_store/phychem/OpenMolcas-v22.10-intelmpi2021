@@ -1,0 +1,8 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/lib:/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/lib64:};
+setenv LIBRARY_PATH {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/lib:/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/lib64:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/include:};
+prepend-path PATH {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app};
+prepend-path PATH {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/bin};
+setenv PROGLIST {/public/software/apprepo/OpenMolcas/v22.10-intelmpi2021/app/pymolcas};

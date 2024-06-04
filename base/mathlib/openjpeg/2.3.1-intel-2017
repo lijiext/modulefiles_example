@@ -1,0 +1,16 @@
+#%Module1.0
+module-whatis	"OpenJPEG is an open-source JPEG 2000 codec written in C language. It has been 
+		 developed in order to promote the use of JPEG 2000, a still-image compression 
+		 standard from the Joint Photographic Experts Group (JPEG). Since may 2015, it 
+		 is officially recognized by ISO/IEC and ITU-T as a JPEG 2000 Reference Software.
+		 version: 2.3.1
+		 website: https://www.openjpeg.org/
+"
+set             openjpeg_DIR		/public/software/mathlib/openjpeg/2.3.1/intel
+module load		compiler/intel/2017.5.239
+conflict 	mathlib/openjpeg
+
+prepend-path    PATH                    ${openjpeg_DIR}/bin
+prepend-path    LD_LIBRARY_PATH         ${openjpeg_DIR}/lib
+prepend-path    PKG_CONFIG_PATH         ${openjpeg_DIR}/lib/pkgconfig
+prepend-path    INCLUDE                 ${openjpeg_DIR}/include

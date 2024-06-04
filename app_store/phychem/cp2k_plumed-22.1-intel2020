@@ -1,0 +1,5 @@
+#%Module1.0
+setenv LD_LIBRARY_PATH {/public/software/apprepo/cp2k_plumed/22.1-intel2020/app/tools/toolchain/build/plumed-2.7.3/lib:};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/22.1-intel2020/app/exe/local};
+setenv CP2K_DATA_DIR {/public/software/apprepo/cp2k_plumed/22.1-intel2020/app/data};
+setenv PROGLIST {/public/software/apprepo/cp2k_plumed/22.1-intel2020/app/exe/local/cp2k.popt};

@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "assembly-stats is a tool for ssembly metric visualisations to facilitate rapid assessment and 
+		 comparison of assembly quality
+                 version: 17.02
+                 website: https://github.com/rjchallis/assembly-stats
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/assembly_stats/17.02-none/app
+prepend-path    PATH                    ${APPS_HOME}/pl
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    PERL5LIB	        ${APPS_HOME}/lib/perl5
+prepend-path    MANPATH			${APPS_HOME}/man
+prepend-path    PROGLIST    ${APPS_HOME}/pl/asm2stats.pl

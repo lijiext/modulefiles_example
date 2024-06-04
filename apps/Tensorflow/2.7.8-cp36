@@ -1,0 +1,5 @@
+###%Module 1.0
+conflict apps/Tensorflow
+module load apps/anaconda3/5.2.0
+module load compiler/dtk/21.10
+

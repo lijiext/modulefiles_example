@@ -1,0 +1,4 @@
+#%Module1.0
+setenv PKG_CONFIG_PATH {/public/software/apprepo/qe/6.5-intelmpi_2017/app/pkgconfig:};
+prepend-path PATH {/public/software/apprepo/qe/6.5-intelmpi_2017/app/bin};
+setenv PROGLIST {/public/software/apprepo/qe/6.5-intelmpi_2017/app/bin/pw.x};

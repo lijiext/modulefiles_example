@@ -1,0 +1,25 @@
+#%Module1.0
+
+#installe par François
+proc ModulesHelp { } {
+    puts stderr "Intel Compiler "
+}
+
+module-whatis   "Intel compiler, version 2020.1.217"
+
+conflict compiler/intel
+
+set             CP_INTEL_DIR            /public/software/compiler/intel/intel-2020/compilers_and_libraries_2020.1.217
+prepend-path    PATH                    ${CP_INTEL_DIR}/bin/intel64
+prepend-path    LD_LIBRARY_PATH         ${CP_INTEL_DIR}/compiler/lib/intel64:${CP_INTEL_DIR}/mkl/lib/intel64:${CP_INTEL_DIR}/tbb/lib/intel64
+prepend-path    LIBRARY_PATH            ${CP_INTEL_DIR}/compiler/lib/intel64:${CP_INTEL_DIR}/mkl/lib/intel64:${CP_INTEL_DIR}/tbb/lib/intel64
+prepend-path    MANPATH                 ${CP_INTEL_DIR}/man/en_US
+prepend-path    INCLUDE                 ${CP_INTEL_DIR}/mkl/include
+prepend-path    FPATH                   ${CP_INTEL_DIR}/mkl/include
+prepend-path    CPATH                   ${CP_INTEL_DIR}/mkl/include
+prepend-path    INTEL_LICENSE_FILE      ${CP_INTEL_DIR}/licenses
+setenv          MKLROOT                 ${CP_INTEL_DIR}/mkl
+setenv          MKL_DEBUG_CPU_TYPE      5
+prepend-path    TBBROOT                 ${CP_INTEL_DIR}/tbb
+prepend-path    MIC_LD_LIBRARY_PATH     ${CP_INTEL_DIR}/compiler/lib/mic:${CP_INTEL_DIR}/mkl/lib/mic
+prepend-path    NLSPATH                 ${CP_INTEL_DIR}/compiler/lib/intel64/locale/%l_%t/%N:${CP_INTEL_DIR}/mkl/lib/intel64/locale/%l_%t/%N

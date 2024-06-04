@@ -1,0 +1,4 @@
+#%Module1.0
+setenv PKG_CONFIG_PATH {/public/software/apprepo/abinit/8.10.3-hpcx_intel2017/app/pkgconfig:};
+prepend-path PATH {/public/software/apprepo/abinit/8.10.3-hpcx_intel2017/app/bin};
+setenv PROGLIST {/public/software/apprepo/abinit/8.10.3-hpcx_intel2017/app/bin/abinit};

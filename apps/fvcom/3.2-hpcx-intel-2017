@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "FVCOM is a prognostic, unstructured-grid, finite-volume, free-surface, 3-D primitive 
+		 equation coastal ocean circulation model developed by UMASSD-WHOI joint efforts. The 
+		 model consists of momentum, continuity, temperature, salinity and density equations and 
+		 is closed physically and mathematically using turbulence closure submodels.
+		 version: 3.2
+		 website: http://fvcom.smast.umassd.edu/fvcom
+"
+module load		mpi/hpcx/intel-2017.5.239
+module load		mathlib/netcdf/4.4.1-intel-2017
+conflict	fvcom
+set             APPS_HOME            /public/software/apps/fvcom/3.2/hpcx-2.4.1-intel2017
+prepend-path    PATH                 ${APPS_HOME}/FVCOM_source/

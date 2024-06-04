@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "Curl is a command-line tool for transferring data specified with URL syntax.
+		 libcurl is the library curl is using to do its job. It is readily available 
+	 	 to be used by your software. 
+		 version: 7.58.0
+		 website: https://curl.se   https://github.com/curl/curl
+"
+module load		compiler/intel/2017.5.239
+conflict 	curl
+set             APPS_HOME               /public/software/apps/curl/7.58.0/intel
+prepend-path    PATH                    ${APPS_HOME}/bin
+prepend-path    LD_LIBRARY_PATH         ${APPS_HOME}/lib
+prepend-path    PKG_CONFIG_PATH         ${APPS_HOME}/lib/pkgconfig
+prepend-path	MANPATH        		${APPS_HOME}/share/man

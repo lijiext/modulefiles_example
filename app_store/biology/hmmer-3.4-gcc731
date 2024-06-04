@@ -1,0 +1,3 @@
+#%Module1.0
+prepend-path PATH {/public/software/apprepo/hmmer/3.4-gcc731/app/hmmer/bin};
+setenv PROGLIST {/public/software/apprepo/hmmer/3.4-gcc731/app/hmmer/bin};

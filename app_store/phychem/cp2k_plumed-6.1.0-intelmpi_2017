@@ -1,0 +1,17 @@
+#%Module1.0
+setenv GSL_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/gsl-2.6};
+setenv ELPA_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libint-1.1.6};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libxsmm-1.8.3/lib:/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libxc-4.0.3/lib:/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libint-1.1.6/lib:/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/elpa-2017.05.002/lib:/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/fftw-3.3.8/lib:/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/gsl-2.6/lib:/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/plumed-2.4.5/lib:};
+setenv PLUMED_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/plumed-2.4.5};
+setenv LIBXSMM_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/elpa-2017.05.002};
+setenv LIBXC_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libxsmm-1.8.3};
+setenv LIBINT_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libxc-4.0.3};
+setenv FFTW_HOME {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/fftw-3.3.8};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/plumed-2.4.5/bin};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/gsl-2.6/bin};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/fftw-3.3.8/bin};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/elpa-2017.05.002/bin};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libint-1.1.6/bin};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/deps/libxsmm-1.8.3/bin};
+prepend-path PATH {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/bin};
+setenv PROGLIST {/public/software/apprepo/cp2k_plumed/6.1.0-intelmpi_2017/app/bin/cp2k.popt};

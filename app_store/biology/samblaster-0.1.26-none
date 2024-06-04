@@ -1,0 +1,13 @@
+#%Module1.0
+module-whatis   "samblaster is a fast and flexible program for marking duplicates in read-id grouped 
+                 paired-end SAM files. It can also optionally output discordant read pairs and/or split 
+                 read mappings to separate SAM files, and/or unmapped/clipped reads to a separate FASTQ 
+                 file. When marking duplicates, samblaster will require approximately 20MB of memory per 
+                 1M read pairs.
+                 version: 0.1.26
+                 website: https://github.com/GregoryFaust/samblaster
+"
+#prereq
+set             APPS_HOME   /public/software/apprepo/samblaster/0.1.26-none/app
+prepend-path    PATH                    ${APPS_HOME}
+prepend-path    PROGLIST    ${APPS_HOME}/samblaster

@@ -1,0 +1,8 @@
+#%Module1.0
+setenv C_INCLUDE_PATH {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/include:};
+setenv LD_LIBRARY_PATH {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/conda-env/lib:/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/lib:/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/lib64:};
+setenv LIBRARY_PATH {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/lib:/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/lib64:};
+setenv CPLUS_INCLUDE_PATH {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/include:};
+prepend-path PATH {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app};
+prepend-path PATH {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/bin};
+setenv PROGLIST {/public/software/apprepo/smilei/5.0-intelmpi2021_py38/app/bin/smilei};

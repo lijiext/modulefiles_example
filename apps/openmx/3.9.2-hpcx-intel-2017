@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis   "OpenMX (Open source package for Material eXplorer) is a software package for nano-scale 
+		 material simulations based on density functional theories (DFT), norm-conserving 
+		 pseudopotentials, and pseudo-atomic localized basis functions. The methods and algorithms 
+		 used in OpenMX and their implementation are carefully designed for the realization of 
+		 large-scale ab initio electronic structure calculations on parallel computers based on 
+		 the MPI or MPI/OpenMP hybrid parallelism. 
+		 version: 3.9.2
+		 website: http://www.openmx-square.org/
+"
+module load		mpi/hpcx/intel-2017.5.239
+conflict	openmx
+set             APPS_HOME               /public/software/apps/openmx/3.9.2/hpcx-2.4.1-intel2017
+prepend-path    PATH                    ${APPS_HOME}/bin

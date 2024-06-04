@@ -1,0 +1,15 @@
+#%Module1.0
+module-whatis   "LAMMPS is a classical molecular dynamics code, and an acronym for Large-scale Atomic/Molecular 
+		 Massively Parallel Simulator. LAMMPS has potentials for solid-state materials (metals, semiconductors) 
+		 and soft matter (biomolecules, polymers) and coarse-grained or mesoscopic systems. It can be used 
+		 to model atoms or, more generically, as a parallel particle simulator at the atomic, meso, or 
+		 continuum scale. LAMMPS runs on single processors or in parallel using message-passing techniques 
+		 and a spatial-decomposition of the simulation domain. The code is designed to be easy to modify 
+		 or extend with new functionality.
+		 version: 7Aug19 with intel17-intelmpi17
+		 website: https://lammps.sandia.gov/ 
+"
+module load compiler/intel/2017.5.239 mpi/intelmpi/2017.4.239 mathlib/fftw/3.3.8-intel-2017-double
+conflict	lammps
+set             APPS_HOME            /public/software/apps/lammps/16Mar18/intelmpi2017
+prepend-path    PATH                 ${APPS_HOME}
